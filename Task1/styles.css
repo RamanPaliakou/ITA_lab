@@ -13,7 +13,7 @@ header {
 }
 .container {
     width: 1920px;
-    /*border: 10px solid black;*/
+    border: 10px solid black;
     margin: 0 auto;
 }
 .sitename {
@@ -79,9 +79,10 @@ section#n4 {
     margin: 0;
 }
 .quotepanel {
-    padding: 80px 300px 0 300px;
+    margin:0 0 0 375px;
+    padding: 80px 35px 0 28px;
     float: left;
-    display: block;
+
 }
 .quote {
     height: 260px;
@@ -89,6 +90,7 @@ section#n4 {
     text-align: center;
     margin: 0 30px 0 0;
     display: inline-block;
+    align-content: center;
 }
 .quote h2 {
     margin: 35px 0 0 0;
@@ -97,4 +99,37 @@ section#n4 {
 }
 .quote p {
     margin: 29px 0 0 0;
+}
+
+section#infosection {
+    height: 622px;
+    background: #fff;
+    padding: 80px 0px 0 0;
+}
+
+footer {
+    height: 522px;
+    background: url(img/footerbck.png) no-repeat center top / cover;
+}
+.infoblock  {
+    heigth: 201px;
+    width: 570px;
+    float: left;
+    display: block;
+}
+.infoblock_textblock{
+    float: left;
+    margin: 0 30px 0 0;
+}
+.infoblock_textblock h2 {
+    margin: 40px 0 0 0;
+    font-size: 28px;
+    text-align: right;
+
+}
+.infoblock_textblock p {
+    max-width: 300px;
+    font-size: 16px;
+    text-align: right;
+
 }
