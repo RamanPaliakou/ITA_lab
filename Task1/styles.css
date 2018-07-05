@@ -12,7 +12,7 @@ header {
     color: white;
 }
 .container {
-    width: 1170px;
+    width: 1920px;
     /*border: 10px solid black;*/
     margin: 0 auto;
 }
@@ -77,4 +77,24 @@ section#n4 {
     height: 420px;
     background: url(img/bck2.png) no-repeat center top / cover;
     margin: 0;
+}
+.quotepanel {
+    padding: 80px 300px 0 300px;
+    float: left;
+    display: block;
+}
+.quote {
+    height: 260px;
+    width: 370px;
+    text-align: center;
+    margin: 0 30px 0 0;
+    display: inline-block;
+}
+.quote h2 {
+    margin: 35px 0 0 0;
+    font-weight: normal;
+    font-size: 28px;
+}
+.quote p {
+    margin: 29px 0 0 0;
 }
