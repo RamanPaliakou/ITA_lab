@@ -1,0 +1,43 @@
+body {
+    padding : 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+div {
+    box-sizing: border-box;
+}
+header {
+    background: url(img/banner_header.jpg) no-repeat center top / cover;
+    height: 100px;
+    color: white;
+}
+.container {
+    width: 1170px;
+    /*border: 10px solid black;*/
+    margin: 0 auto;
+}
+.sitename {
+    margin: 31px 0 0 0;
+    float: left;
+    font-size: 24px;
+}
+
+nav{
+    float:right;
+    margin: 34px;
+}
+.topmenu {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.topmenu li {
+    float: left;
+    display: block;
+    margin-right: 43px;
+    font-size: 16px;
+}
+.topmenu a {
+    color: #fff;
+    text-decoration: none;
+}
