@@ -18,8 +18,9 @@ section {
 }
 .container {
 
-    border: 10px solid black;
+    /*border: 10px solid black;*/
     margin: 0 auto;
+    width: 1920px;
 }
 h2 {
     text-align: inherit;
@@ -87,7 +88,7 @@ section#quotes {
     margin: 0;
     text-align: center;
 }
-
+/*SECTION QUOTES*/
 .quote {
     height: 260px;
     width: 370px;
@@ -136,14 +137,87 @@ section#quotes {
     height: 9px;
     width: 20px;
     margin: 0 auto;
-
 }
-/*.quote h2 {
-    margin: 35px 0 0 0;
-    font-weight: normal;
+/*END SECTION QUOTES*/
+
+/*SECTION MAININFO*/
+section#maininfo {
+    height: 622px;
+    background: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 80px 0 80px 0;
+    box-sizing: border-box;
+}
+
+.left-infopanel-block {
+    float: right;
+    text-align: right;
+}
+.right-infopanel-block {
+    float: left;
+    text-align: left;
+}
+
+.infopanel {
+    height: 462px;
+    width: 570px;
+    text-align: left;
+    display: inline-block;
+    margin: 0 30px 0 0;
+}
+
+.infoblock {
+    height: 200px;
+    width: 570px;
+    margin: 0 0 30px 0;
+}
+
+.infoblock-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px 100px 100px 100px;
+    margin: 0;
+    float:inherit;
+}
+
+.infoblockimage1 {
+    background: url(img/infoimg1.png) center top no-repeat;
+}
+.infoblockimage2 {
+    background: url(img/infoimg2.png) center top no-repeat;
+}
+.infoblockimage3 {
+    background: url(img/infoimg3.png) center top no-repeat;
+}
+.infoblockimage4 {
+    background: url(img/infoimg4.png) center top no-repeat;
+}
+.infoblock-textblock {
+    margin: 40px 31px 0 31px;
+    width: 304px;
+    display: inline-block;
+    float:inherit;
+    text-align: inherit;
+}
+.infoblock-textblock-h2 {
     font-size: 28px;
+    margin: 0 0 31px 0;
+    padding: 0;
 }
-.quote p {
-    margin: 29px 0 0 0;
-}*/
+.infoblock-textblock-p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.infoblock-textblock-a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #db5940;
+    padding: 0;
+}
 
+footer {
+    height: 522px;
+    background: url(img/footerbck.png) no-repeat center top / cover;
+}
