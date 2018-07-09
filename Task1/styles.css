@@ -8,10 +8,6 @@ div {
     box-sizing: border-box;
 }
 
-section {
-    min-width: 1920px;
-}
-
 .container {
     margin: 0 auto;
     width: 1170px;
@@ -69,6 +65,7 @@ section {
 /*TITLE-SECTION-START*/
 .title-section{
     max-height: 540px;
+    min-width: 1920px;
     background: #38373B;
     margin: 0;
     padding: 46px 0 0 0;
@@ -100,6 +97,7 @@ section {
 
 /*SECTION QUOTES*/
 .quotes-section {
+    min-width: 1920px;
     height: 420px; /*420*/
     background: #F4F4F4;
     margin: 0;
@@ -176,7 +174,8 @@ section {
 /*START SECTION MAININFO*/
 /*section = left&right info-panel, info-panel = 2 horiz info-blocks*/
 .main-info-section {
-    min-height: 622px;
+    min-width: 1920px;
+    height: 622px;
     margin: 0;
     padding: 0;
     background: #fff;
@@ -188,7 +187,7 @@ section {
     width: 570px;
     text-align: left;
     display: inline-block;
-    margin: 80px 26px 80px 0;
+    margin: 80px 24px 80px 0;
 }
 
 .info-panel:last-child {
@@ -274,6 +273,7 @@ section {
 
 /*START SECTION-CONTACTS-SUBSCRIBE-CREDENTIALS*/
 .contacts-subscribe-creds-section {
+    min-width: 1920px;
     max-height: 522px;
     background: url(img/footerbck.png) no-repeat center top / cover;
     padding: 80px 0 0 0;
