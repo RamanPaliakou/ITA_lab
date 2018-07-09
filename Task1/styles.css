@@ -1,179 +1,217 @@
 body {
     padding : 0;
     margin: 0;
-    font-family: Myriad Pro, sans-serif;
+    font-family: "Myriad Pro", sans-serif;
+
 }
 div {
     box-sizing: border-box;
 }
-header {
-    background: #DB5940;
-    height: 80px;
-    color: white;
-    min-width: 1920px;
 
-}
 section {
     min-width: 1920px;
 }
+
 .container {
-
-    /*border: 10px solid black;*/
     margin: 0 auto;
-    width: 1920px;
+    width: 1170px;
 }
-h2 {
-    text-align: inherit;
-}
-.sitename {
 
+/*LOGO-MAIN-MENU-PANEL-START*/
+.menu-logo-panel {
+    background: #DB5940;
+    height: 80px;
+    max-height: 80px;
+    min-width: 1920px;
+
+}
+
+.site-name {
+    margin: 32px 0 0 0;
     float: left;
     font-size: 24px;
-    margin: 40px 0 35px 0;
-
-}
-nav{
-    float:right;
-    margin: 40px 0 35px 0;
-}
-.topmenu {
-    padding: 0;
-    margin: 0;
-    display: block;
-}
-.topmenu li {
-    float: left;
-    display: block;
-    margin-right: 43px;
-    font-size: 16px;
-}
-.topmenu a {
+    display: inline-block;
     color: #fff;
+}
+
+.main-menu{
+    float:right;
+    margin: 35px 0 35px 0;
+}
+
+.main-menu-element {
+    float: left;
+    display: inline-block;
+    margin:0 43px 0 0;
     text-decoration: none;
 }
-section#upptitle{
-    height: 140px;
-    background: #38373B;
+
+.main-menu-element:last-child {
     margin: 0;
 }
-.title h1 {
+
+.main-menu-ref {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.main-menu-ref:hover {
+    font-weight: 700;
+}
+
+.main-menu-ref:active {
+    color: #4F4E53;
+}
+/*LOGO-MAIN-MENU-PANEL-END*/
+
+
+/*TITLE-SECTION-START*/
+.title-section{
+    max-height: 540px;
+    background: #38373B;
+    margin: 0;
+    padding: 46px 0 0 0;
+}
+
+.main-title {
     margin: 0;
     font-size: 30px;
-    padding: 46px 0 0 0 ;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
 }
-.title p {
+
+.main-undertitle {
     margin: 0;
-    padding: 0;
     font-size: 20px;
     text-align: center;
     color: #fff;
 }
 
-section#mainpicture{
-    height: 400px;
-    background: url(img/picturebck.png) no-repeat center top / cover;
-    margin: 0;
-}
-.mainpicture_image {
+.main-picture {
+    margin: 50px 0 0 0;
     background: url(img/titlepic.png) no-repeat center top / cover;
     height: 400px;
+
+}
+/*TITLE-SECTION-END*/
+
+
+/*SECTION QUOTES*/
+.quotes-section {
+    height: 420px; /*420*/
+    background: #F4F4F4;
+    margin: 0;
 }
 
-section#quotes {
-    height: 420px;
-    background: url(img/bck2.png) no-repeat center top / cover;
-    margin: 0;
-    text-align: center;
+.quote:last-child {
+    margin: 80px 0 80px 0;
 }
-/*SECTION QUOTES*/
+
 .quote {
     height: 260px;
     width: 370px;
-    text-align: center;
     margin: 80px 30px 80px 0;
-    display: inline-block;
-    align-content: center;
-    border: 1px solid black;
     padding: 0 36px 0 36px;
-
+    text-align: center;
+    display: block;
+    float: left;
 }
 
 .quote-image {
-
     height: 100px;
     width: 100px;
     border-radius: 50px 50px 50px 50px;
     margin: 0 auto 34px auto;
 }
-.quoteimage1 {
-    background: url(img/Heart.png) no-repeat center top;
-}
-.quoteimage2 {
-    background: url(img/Pencil.png) no-repeat center top;
-}
-.quoteimage3 {
-    background: url(img/Flag.png) no-repeat center top;
-}
-.quotepanel {
-    margin:0 0 0 375px;
-    padding: 80px 35px 0 28px;
-    float: left;
-
-}
 
 .quote-title {
     margin: 0 0 29px 0;
+    padding: 0;
     font-size: 28px;
 }
+
 .quote-p {
     font-size: 16px;
-    margin: 0 0 31px 0;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
-.quote-arrow {
-    background: url(img/turn-right.png) no-repeat center top /cover;
-    height: 9px;
-    width: 20px;
+
+.quote-link {
+    min-height: 9px;
+    max-height: 10px;
+    min-width: 20px;
+    max-width: 21px;
     margin: 0 auto;
+    display: block;
+}
+
+.link-init-image-arrow {
+    background: url(img/turn-right-orange.png) no-repeat center top /cover;
+}
+
+.link-init-image-arrow:hover {
+    background: url(img/turn-right-grey.png) no-repeat center top /cover;
+}
+
+.link-init-image-arrow:active {
+    background: url(img/turn-right-black.png) no-repeat center top /cover;
+}
+
+.image-heart {
+    background: url(img/Heart.png) no-repeat center top;
+}
+
+.image-pencil {
+    background: url(img/Pencil.png) no-repeat center top;
+}
+
+.image-flag {
+    background: url(img/Flag.png) no-repeat center top;
 }
 /*END SECTION QUOTES*/
 
-/*SECTION MAININFO*/
-section#maininfo {
-    height: 622px;
-    background: #fff;
+
+/*START SECTION MAININFO*/
+/*section = left&right info-panel, info-panel = 2 horiz info-blocks*/
+.main-info-section {
+    min-height: 622px;
     margin: 0;
-    text-align: center;
-    padding: 80px 0 80px 0;
+    padding: 0;
+    background: #fff;
     box-sizing: border-box;
 }
 
-.left-infopanel-block {
-    float: right;
-    text-align: right;
-}
-.right-infopanel-block {
-    float: left;
-    text-align: left;
-}
-
-.infopanel {
+.info-panel {
     height: 462px;
     width: 570px;
     text-align: left;
     display: inline-block;
-    margin: 0 30px 0 0;
+    margin: 80px 26px 80px 0;
 }
 
-.infoblock {
+.info-panel:last-child {
+    margin: 80px 0 80px 0;
+}
+
+.left-panel-block {
+    float: right;
+    text-align: right;
+}
+
+.right-panel-block {
+    float: left;
+    text-align: left;
+}
+
+.info-block {
     height: 200px;
     width: 570px;
     margin: 0 0 30px 0;
 }
 
-.infoblock-image {
+.info-block-image {
     width: 200px;
     height: 200px;
     border-radius: 100px 100px 100px 100px;
@@ -181,48 +219,67 @@ section#maininfo {
     float:inherit;
 }
 
-.infoblockimage1 {
-    background: url(img/infoimg1.png) center top no-repeat;
-}
-.infoblockimage2 {
-    background: url(img/infoimg2.png) center top no-repeat;
-}
-.infoblockimage3 {
-    background: url(img/infoimg3.png) center top no-repeat;
-}
-.infoblockimage4 {
-    background: url(img/infoimg4.png) center top no-repeat;
-}
-.infoblock-textblock {
+.info-block-textblock {
     margin: 40px 31px 0 31px;
     width: 304px;
     display: inline-block;
     float:inherit;
     text-align: inherit;
 }
-.infoblock-textblock-h2 {
+
+.info-block-textblock-h2 {
     font-size: 28px;
     margin: 0 0 31px 0;
     padding: 0;
 }
-.infoblock-textblock-p {
+
+.info-block-textblock-p {
     font-size: 16px;
     margin: 0;
     padding: 0;
 }
-.infoblock-textblock-a {
+
+.info-block-textblock-a {
     font-size: 16px;
     text-decoration: none;
     color: #db5940;
     padding: 0;
 }
 
-footer {
+.info-block-textblock-a:hover {
+    color: #38373B;
+}
+
+.info-block-textblock-a:active {
+    color: #000000;
+}
+
+.image-boy {
+    background: url(img/boy.png) center top no-repeat;
+}
+
+.image-birds {
+    background: url(img/birds.png) center top no-repeat;
+}
+
+.image-statue {
+    background: url(img/statue.png) center top no-repeat;
+}
+
+.image-tree {
+    background: url(img/tree.png) center top no-repeat;
+}
+/*END SECTION MAININFO*/
+
+
+/*START SECTION-CONTACTS-SUBSCRIBE-CREDENTIALS*/
+.contacts-subscribe-creds-section {
     max-height: 522px;
     background: url(img/footerbck.png) no-repeat center top / cover;
     padding: 80px 0 0 0;
     min-width: 1920px;
 }
+
 .contact-panel {
     text-align: center;
     height: 148px;
@@ -231,10 +288,13 @@ footer {
 
     height: 70px;
     width: 370px;
-    margin: 0 30px 79px 0;
+    margin: 0 25px 79px 0;
     display: inline-block;
-
 }
+.contact:last-child {
+    margin: 0 0 79px 0;
+}
+
 .contact-img {
     width: 70px;
     height: 70px;
@@ -242,14 +302,17 @@ footer {
     float: left;
     margin: 0 30px 0 0;
 }
+
 .left-contact-image {
     background: url(img/paperplane.png) no-repeat center top / cover;
 
 }
+
 .contact-text {
     padding: 14px 0 0 0;
     float: left;
 }
+
 .contact-text-p {
     margin:  0 15px 0 0;
     width: 255px;
@@ -257,6 +320,7 @@ footer {
     text-align: left;
     color: #8A8892;
 }
+
 .horizontal-line {
     height: 1px;
     border-top: 1px solid #4F4E53;
@@ -268,10 +332,12 @@ footer {
     font-size: 26px;
     color: #E6E6E6;
 }
+
 .input-panel {
     width:589px;
     margin: 30px auto 0 auto;
 }
+
 .footer-email-line {
     height: 46px;
     max-height: 46px;
@@ -284,6 +350,7 @@ footer {
     padding: 0 0 0 16px;
     font-size: 16px;
 }
+
 .footer-send-button {
     font-size: 18px;
     height: 46px;
@@ -296,14 +363,26 @@ footer {
     color: #DB5940;
     background: #fff;
 }
+
+.footer-send-button:hover {
+    background: #4F4E53;
+}
+
+.footer-send-button:active {
+    background: #DB5940;
+    color:black;
+}
+
 .copyright {
     margin: 40px 0 0 0;
     text-align: center;
     color: #9A98A2;
 }
+
 .credentials {
     text-align: center;
 }
+
 .designed-by-orange {
     color: #DB5940;
     margin: 0;
@@ -312,6 +391,7 @@ footer {
     text-decoration: none;
     display: inline;
 }
+
 .designed-by-white {
     margin: 0;
     padding :0;
@@ -320,7 +400,17 @@ footer {
     text-decoration: none;
     display: inline;
 }
+
 .horizontal-line-down {
     height: 2px;
     border-top: 1px solid #fff;
 }
+
+.design-link:hover {
+    color: #fff;
+}
+
+.design-link:active {
+    color: #000000;
+}
+/*END SECTION-CONTACTS-SUBSCRIBE-CREDENTIALS*/
