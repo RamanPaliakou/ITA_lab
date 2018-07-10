@@ -1,0 +1,104 @@
+.link-title:link {
+    text-decoration: none;
+    color:#ffffff;
+}
+.link-title:visited {
+    text-decoration: none;
+    color:#ffffff;
+}
+.link-title:hover {
+    text-decoration: none;
+    color:#38373B;
+}
+.link-title:active {
+    text-decoration: none;
+    color: #000000;
+}
+/**/
+.main-menu-element:hover {
+    background: #38373B;
+}
+/**/
+.main-menu-ref:link {
+    color: #ffffff;
+}
+.main-menu-ref:visited {
+    color: #ffffff;
+}
+.main-menu-ref:hover {
+    color:#DB5940;
+}
+.main-menu-ref:active {
+    color: #ffffff;
+}
+/**/
+.link-arrow:link {
+    background: url(../img/turn-right-orange.png) no-repeat center top /cover;
+}
+.link-arrow:visited {
+    background: url(../img/turn-right-orange.png) no-repeat center top /cover;
+}
+.link-arrow:hover {
+    background: url(../img/turn-right-grey.png) no-repeat center top /cover;
+}
+.link-arrow:active {
+    background: url(../img/turn-right-white.png) no-repeat center top /cover;
+}
+/**/
+.link-style1:link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #DB5940;
+}
+.link-style1:visited {
+    font-size: 16px;
+    text-decoration: none;
+    color: #DB5940;
+}
+.link-style1:hover {
+    font-size: 16px;
+    text-decoration: none;
+    color: #A6A4AD;
+}
+.link-style1:active {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+}
+/**/
+.link-style2:link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #9A98A2;
+}
+.link-style2:visited {
+    font-size: 16px;
+    text-decoration: none;
+    color: #9A98A2;
+}
+.link-style2:hover {
+    font-size: 16px;
+    text-decoration: none;
+    color: #DB5940;
+}
+.link-style2:active {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+}
+/**/
+.send-button:hover {
+    font-size: 16px;
+    text-decoration: none;
+    background: #4F4E53;
+}
+
+.send-button:active {
+
+    background: #DB5940;
+    color:black;
+}
+
+
+
+

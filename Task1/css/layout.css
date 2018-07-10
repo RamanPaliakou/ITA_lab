@@ -1,0 +1,42 @@
+/*sections placed from up to down ordered like on the page*/
+/*header*/
+.menu-logo-section {
+    background: #DB5940;
+    height: 80px;
+    min-width: 1920px;
+}
+/*main title text, udertitle text and the main site picture*/
+.title-section{
+    max-height: 540px;
+    min-width: 1920px;
+    background: #38373B;
+    margin: 0;
+    padding: 46px 0 0 0;
+}
+/*section contains 3 small inline horizontal blocks with pics titles and undertitle-text */
+.quotes-section {
+    min-width: 1920px;
+    height: 420px;
+    background: #F4F4F4;
+    margin: 0;
+}
+/*section with 4 blocks, located squarely*/
+.main-info-section {
+    min-width: 1920px;
+    height: 622px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    box-sizing: border-box;
+}
+/*footer*/
+.contacts-subscribe-creds-section {
+    min-width: 1920px;
+    max-height: 522px;
+    background: #38373B;
+    padding: 80px 0 0 0;
+    min-width: 1920px;
+}
+
+
+
