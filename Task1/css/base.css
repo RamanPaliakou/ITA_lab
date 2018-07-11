@@ -1,11 +1,11 @@
 @font-face {
     font-family: CustomTry1;
-    src: url(../fonts/Testcreatedfont-Regular.eot);
+    src: url(../fonts/raleway_thin.eot);
     }
 
 @font-face {
     font-family: CustomTry1;
-    src: url(../fonts/Testcreatedfont-Regular.otf);
+    src: url(../fonts/raleway_thin.otf);
 }
 body {
     padding : 0;
@@ -13,11 +13,7 @@ body {
     font-family: CustomTry1, sans-serif;
 }
 
-div {
+.box {
     box-sizing: border-box;
 }
-/*used to make the informative part of the site have single width and not be linked to the margins*/
-.container {
-    margin: 0 auto;
-    width: 1170px;
-}
+

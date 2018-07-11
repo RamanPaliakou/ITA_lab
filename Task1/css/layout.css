@@ -35,8 +35,12 @@
     max-height: 522px;
     background: #38373B;
     padding: 80px 0 0 0;
-    min-width: 1920px;
 }
 
+/*used to make the informative part of the site have single width and not be linked to the margins*/
+.container {
+    margin: 0 auto;
+    width: 1170px;
+}
 
 
