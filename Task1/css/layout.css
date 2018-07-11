@@ -2,37 +2,53 @@
 /*header*/
 .menu-logo-section {
     background: #DB5940;
-    height: 80px;
-    min-width: 1920px;
+    min-height: 80px;
 }
 /*main title text, udertitle text and the main site picture*/
 .title-section{
-    max-height: 540px;
-    min-width: 1920px;
     background: #38373B;
     margin: 0;
     padding: 46px 0 0 0;
 }
 /*section contains 3 small inline horizontal blocks with pics titles and undertitle-text */
 .quotes-section {
-    min-width: 1920px;
-    height: 420px;
     background: #F4F4F4;
     margin: 0;
+    padding: 70px 0 70px 0;
+}
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.flex-menu {
+    margin: 0 auto 0 auto;
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 /*section with 4 blocks, located squarely*/
 .main-info-section {
-    min-width: 1920px;
-    height: 622px;
+    min-height: 622px;
     margin: 0;
-    padding: 0;
+    padding: 70px 0 70px 0;
     background: #fff;
     box-sizing: border-box;
 }
 /*footer*/
 .contacts-subscribe-creds-section {
-    min-width: 1920px;
-    max-height: 522px;
     background: #38373B;
     padding: 80px 0 0 0;
 }
@@ -40,7 +56,7 @@
 /*used to make the informative part of the site have single width and not be linked to the margins*/
 .container {
     margin: 0 auto;
-    width: 1170px;
+    max-width: 1185px;
 }
 
 
