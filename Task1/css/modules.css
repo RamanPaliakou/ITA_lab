@@ -9,10 +9,6 @@
 }
 
 .spacer {
-    /*width:34vw;
-    min-width: 170px;
-    max-width:650px;
-    height: 1px;*/
     -webkit-flex-grow: 2;
     -moz-flex-grow: 2;
     flex-grow: 2;
@@ -55,7 +51,6 @@
     width: 700px;
     font-size: 30px;
     text-align: right;
-
     text-transform: uppercase;
     color: #fff;
 }
@@ -250,7 +245,7 @@
     color: #ffffff;
 }
 
-.send-button {
+.email-subscribe-button {
     font-size: 17px;
     height: 46px;
     line-height: 25px;
@@ -274,10 +269,10 @@
 .designer-links {
     text-align: center;
     margin: 0 auto 10px auto;
-    font-size:16px;
+    font-size: 16px;
 }
 
-.text-color1 {
+.footer-down-text-light {
     color: #DB5940;
     margin: 0;
     padding: 0;
@@ -285,7 +280,7 @@
     display: inline;
 }
 
-.text-color2 {
+.footer-down-text-dark {
     margin: 0;
     padding: 0;
     color: #9A98A2;

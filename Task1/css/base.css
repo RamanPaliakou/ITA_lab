@@ -1,14 +1,15 @@
 @font-face {
     font-family: CustomTry1;
     src: url(../fonts/raleway_thin.eot);
-    }
+}
 
 @font-face {
     font-family: CustomTry1;
     src: url(../fonts/raleway_thin.otf);
 }
+
 body {
-    padding : 0;
+    padding: 0;
     margin: 0;
     font-family: CustomTry1, sans-serif;
     min-width: 280px;

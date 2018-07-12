@@ -4,88 +4,112 @@
 .link-title:active {
     text-decoration: none;
 }
+
 .link-title:link,
 .link-title:visited {
-    color:#ffffff;
+    color: #ffffff;
 }
+
 .link-title:hover {
-    color:#38373B;
+    color: #38373B;
 }
+
 .link-title:active {
     color: #000000;
 }
+
 .main-menu-element:hover {
     background: #38373B;
 }
+
 .main-menu-ref:link,
 .main-menu-ref:visited {
     color: #ffffff;
 }
+
 .main-menu-ref:hover {
-    color:#DB5940;
+    color: #DB5940;
 }
-.main-menu-ref:active{
+
+.main-menu-ref:active {
     color: #ffffff;
 }
+
 .link-arrow:link,
 .link-arrow:visited {
-    background: url(../img/turn-right-orange.png) no-repeat center top /cover;
+    background: url(../image/turn-right-orange.png) no-repeat center top /cover;
 }
+
 .link-arrow:hover {
-    background: url(../img/turn-right-grey.png) no-repeat center top /cover;
+    background: url(../image/turn-right-grey.png) no-repeat center top /cover;
 }
+
 .link-arrow:active {
-    background: url(../img/turn-right-white.png) no-repeat center top /cover;
+    background: url(../image/turn-right-white.png) no-repeat center top /cover;
 }
-.link-style1:link,
-.link-style1:visited,
-.link-style1:hover,
-.link-style1:active {
+
+.link-style-light:link,
+.link-style-light:visited,
+.link-style-light:hover,
+.link-style-light:active {
     text-decoration: none;
 }
-.link-style1:link {
+
+.link-style-light:link {
     color: #DB5940;
 }
-.link-style1:visited {
+
+.link-style-light:visited {
     color: #DB5940;
 }
-.link-style1:hover {
+
+.link-style-light:hover {
     color: #A6A4AD;
 }
-.link-style1:active {
+
+.link-style-light:active {
     color: #ffffff;
 }
-.link-style2:link,
-.link-style2:visited,
-.link-style2:hover,
-.link-style2:active {
+
+.link-style-dark:link,
+.link-style-dark:visited,
+.link-style-dark:hover,
+.link-style-dark:active {
     text-decoration: none;
 }
-.link-style2:link,
-.link-style2:visited{
+
+.link-style-dark:link,
+.link-style-dark:visited {
     color: #9A98A2;
 }
-.link-style2:hover {
+
+.link-style-dark:hover {
     color: #DB5940;
 }
-.link-style2:active {
+
+.link-style-dark:active {
     color: #ffffff;
 }
-.send-button:hover {
+
+.email-subscribe-button:hover {
     text-decoration: none;
     background: #4F4E53;
 }
-.send-button:active {
+
+.email-subscribe-button:active {
     background: #DB5940;
-    color:black;
+    color: black;
 }
+
 /*transformations*/
 .quote-title {
     position: relative;
 }
+
 .quote-image {
     transition: all 300ms ease;
 }
+
 .quote-image:hover {
     -webkit-transform: scale(1.5, 1.5);
     -moz-transform: scale(1.5, 1.5);
@@ -93,23 +117,26 @@
     -ms-transform: scale(1.5, 1.5);
     transform: scale(1.5, 1.5);
 }
-.left-panel-block .info-block-image{
+
+.left-panel-block .info-block-image {
     -webkit-transition: all 700ms ease 1s;
     -moz-transition: all 700ms ease 1s;
     -ms-transition: all 700ms ease 1s;
     -o-transition: all 700ms ease 1s;
 
     transition: all 700ms ease 1s;
-    box-shadow:  inset -120px 120px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: inset -120px 120px 30px rgba(0, 0, 0, 0.6);
 }
-.right-panel-block .info-block-image{
+
+.right-panel-block .info-block-image {
     -webkit-transition: all 700ms ease 1s;
     -moz-transition: all 700ms ease 1s;
     -ms-transition: all 700ms ease 1s;
     -o-transition: all 700ms ease 1s;
     transition: all 700ms ease 1s;
-    box-shadow:  inset 120px -120px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px -120px 30px rgba(0, 0, 0, 0.6);
 }
+
 .info-block-image:hover {
     box-shadow: none;
 }

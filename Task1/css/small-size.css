@@ -1,20 +1,7 @@
 @media screen and (max-width: 610px) {
     .menu-logo-section {
-        width:100%;
-    }/*
-    .title-section {
-    width: 100vw;
+        width: 100%;
     }
-    .quotes-section {
-        width: 100vw;
-    }
-    .main-info-section {
-        width: 100vw;
-    }
-    .contacts-subscribe-creds-section {
-        width:100vw;
-    }*/
-
 
     .site-name {
         margin: 0 auto 10px auto;
@@ -24,20 +11,23 @@
         color: #fff;
         text-align: center;
     }
+
     .spacer {
         visibility: hidden;
     }
+
     .flex-menu {
-        width:262px;
+        width: 262px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
-        align-items: center  ;
+        align-items: center;
         align-content: center;
         margin: 0 auto 0 auto;
     }
-    .main-menu{
+
+    .main-menu {
         width: inherit;
 
         height: unset;
@@ -45,10 +35,9 @@
         text-decoration: none;
         list-style-type: none;
         display: block;
-        float:none;
-
-
+        float: none;
     }
+
     .main-menu-element {
         width: 260px;
         border: 1px solid #F4F4F4;
@@ -56,69 +45,81 @@
         display: inline-block;
         margin: 0 auto 1px auto;
         padding: 0;
-        float:left;
+        float: left;
         text-align: center;
     }
+
     .main-menu-ref {
         all: unset;
         width: unset;
         height: 20px;
-        float:none;
-        padding: 5px 0  5px 0;
+        float: none;
+        padding: 5px 0 5px 0;
         margin: 0;
         font-size: 16px;
         text-decoration: none;
         list-style-type: none;
         display: block;
     }
+
     .container {
         margin: 0 auto;
     }
+
     .main-picture {
         margin: 15px 0 0 0;
         min-height: 200px;
     }
+
     .quotes-section {
         padding: 15px 0 15px 0;
     }
+
     .title-section {
         padding: 15px 0 0 0;
     }
+
     .main-title {
         width: unset;
         text-align: center;
     }
+
     .quote {
         all: unset;
         margin: 0 0 15px 0;
     }
+
     .quote-image {
         width: 60px;
         height: 60px;
         background-size: contain;
     }
+
     .quote-p {
         margin-bottom: 29px;
     }
+
     .main-info-section {
         padding: 15px 0 15px 0;
         min-height: 1060px;
     }
+
     .info-panel {
         all: unset;
-        margin:0 0 15px 0;
-        padding:0;
-        text-align:center;
+        margin: 0 0 15px 0;
+        padding: 0;
+        text-align: center;
         max-width: 100%;
-
     }
+
     .right-panel-block {
-        all:unset;
+        all: unset;
     }
-    .left-panel-block {
-        all:unset;
 
+    .left-panel-block {
+        all: unset;
     }
+
     .info-block-image {
         width: 130px;
         height: 130px;
@@ -129,28 +130,28 @@
         max-width: 100%;
         height: 230px;
         margin: 15px 0 15px 0;
-
     }
+
     .info-block-textblock {
         width: 95vw;
         float: none;
-        padding:0;
-        margin:0 0 15px 0;
-
+        padding: 0;
+        margin: 0 0 15px 0;
     }
+
     .info-block-image {
         float: none;
-        display:inline-block;
+        display: inline-block;
     }
+
     .info-block-textblock-h2 {
         margin: 0 0 10px 0;
-
     }
+
     .left-panel-block,
     .right-pane-block {
-        float:unset;
+        float: unset;
     }
-
 
     .contact {
         all: unset;
@@ -158,50 +159,55 @@
         height: unset;
         padding: 0 1vw 15px 1vw;
     }
+
     .contact-img,
     .contact-text {
         margin: 0 auto 0 auto;
         float: unset;
-
     }
+
     .contact-text {
         all: unset;
         display: block;
         text-align: center;
     }
+
     .contact-text-p {
-        all:unset;
+        all: unset;
         padding: 5px 0 0 0;
         font-size: 4vw;
         display: inline-block;
         color: #8A8892;
- }
+    }
+
     .footer-title {
         display: block;
         margin: 15px auto 15px auto;
     }
+
     .contacts-subscribe-creds-section .flex-horizontal {
-        all:unset;
-        display:block;
+        all: unset;
+        display: block;
         text-align: center;
     }
+
     .input-panel {
-        all:unset;
+        all: unset;
         width: 90vw;
         margin: 0 auto 0 auto;
         padding: 0 1vw 0 1vw;
         text-align: center;
-
     }
-    .send-button {
+
+    .email-subscribe-button {
         margin: 2px 0 0 0;
         display: inline-block;
         float: unset;
         width: 50%;
         border-radius: 5px;
         text-align: center;
-
     }
+
     .email-line {
         text-align: center;
         padding: 0;
@@ -213,20 +219,23 @@
     }
 
     .designer-links {
-
         font-size: 4vw;
     }
+
     .copyright {
         font-size: 5vw;
         margin: 15px auto 0 auto;
     }
+
     .horizontal-line {
         margin: 10px 0 0 0;
     }
+
     .contacts-subscribe-creds-section {
         background: #38373B;
         padding: 15px 0 0 0;
     }
+
     .contact-text-p {
         text-align: center;
     }

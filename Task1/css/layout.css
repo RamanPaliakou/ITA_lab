@@ -4,18 +4,21 @@
     background: #DB5940;
     min-height: 80px;
 }
+
 /*main title text, udertitle text and the main site picture*/
-.title-section{
+.title-section {
     background: #38373B;
     margin: 0;
     padding: 46px 0 0 0;
 }
+
 /*section contains 3 small inline horizontal blocks with pics titles and undertitle-text */
 .quotes-section {
     background: #F4F4F4;
     margin: 0;
     padding: 70px 0 70px 0;
 }
+
 /*section with 4 blocks, located squarely*/
 .main-info-section {
     min-height: 622px;
@@ -24,16 +27,19 @@
     background: #fff;
     box-sizing: border-box;
 }
+
 /*footer*/
 .contacts-subscribe-creds-section {
     background: #38373B;
     padding: 80px 0 0 0;
 }
+
 /*used to make the informative part of the site have single width and not be linked to the margins*/
 .container {
     margin: 0 auto;
     max-width: 1185px;
 }
+
 .flex-horizontal,
 .flex-menu,
 .flex-vertical {
@@ -42,14 +48,17 @@
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
 .flex-horizontal {
     flex-direction: row;
 }
+
 .flex-menu {
     margin: 0 auto 0 auto;
     max-width: 1170px;
     flex-direction: row;
 }
+
 .flex-vertical {
     flex-direction: column;
 }
