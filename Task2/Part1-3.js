@@ -1,9 +1,10 @@
+//additional function
 function forEach(arr, iterator, context) {
     for (let i = 0, l = arr.length; i < l; i++) {
         iterator.call(context, arr[i]);
     }
 }
-
+//main function
 function linearFold(obj, iterator, accu, thisArg) {
     let hasAccu = arguments.length > 2;
     forEach(obj, function (value, index, list) {
@@ -18,10 +19,7 @@ function linearFold(obj, iterator, accu, thisArg) {
     return accu;
 }
 
-// set an array of values to get the sum of
+//test example
 let someArray = [1, 10, 100,200];
-
-
-// output the sum of someArray
-let foldedArray = linearFold(someArray, (x,y)=>x+y); // 111
-foldedArray = linearFold(someArray, (x,y)=>x+y, 1000); //1111
+console.log(linearFold(someArray, (x,y)=>x+y)); // 311
+console.log(linearFold(someArray, (x,y)=>x+y, 1000, this)); //1311

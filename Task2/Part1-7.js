@@ -1,10 +1,10 @@
-//cause i'm unfamiliar with import-export from ES6 i have to use copypast of already realized functions
+//Raman: I tried import-export from ES6, but it didn't worked as supposed, so i have to use copypast from previous tasks
+//additional functions
 function forEach(arr, iterator, context) {
     for (let i=0, l=arr.length;i<l;i++) {
         iterator.call(context,arr[i]);
     }
 };
-
 function filter(arr, iterator, context) {
     let result=[];
     forEach(arr, function(value,index,list) {
@@ -14,7 +14,6 @@ function filter(arr, iterator, context) {
     });
     return result;
 };
-
 function linearFold(obj, iterator, accu, thisArg) {
     var hasAccu = arguments.length > 2;
     forEach(obj, function (value, index, list) {
@@ -29,9 +28,7 @@ function linearFold(obj, iterator, accu, thisArg) {
     return accu;
 };
 
-var add = function (x, y) {
-    return x + y;
-};
+//main solution (test ex also)
 let test=[1,2,3,4,5,6,7,8,9,13,14,15,16,17];
 let result=filter(test, x=>x%2===0);
 test=result.length;

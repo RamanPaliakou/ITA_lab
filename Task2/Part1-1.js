@@ -1,7 +1,5 @@
-@import(Additinal_Functions.js)
 function partialApply() {
     let fn = arguments [arguments.length - 1];
-
     let initialArguments = [].slice.call(arguments, 0,arguments.length - 1);
 
     return function() {
@@ -10,6 +8,7 @@ function partialApply() {
     }
  }
 
+ //sums all given arguments. test example
 function sum() {
     let result=0;
     [].map.call(arguments,x=>result+=x);
