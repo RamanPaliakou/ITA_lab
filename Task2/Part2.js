@@ -25,6 +25,10 @@ $$.prototype.isString = function (obj) {
     //return(obj.constructor.name==='String');
     return (Object.prototype.toString.call(obj) === '[object String]');
 };
+$$.prototype.isFunction = function (obj) {
+    //return(obj.constructor.name==='String');
+    return (Object.prototype.toString.call(obj) === '[object Function]');
+};
 $$.prototype.isUndefined = function (obj) {
     return !(obj === obj);
 };
@@ -33,6 +37,8 @@ $$.prototype.isNull = function (obj) {
 };
 
 $$.prototype.forEach = function (arr, iterator) {
+    if (!$$.prototype.isArray(arr)) throw ("NotArrayFirstArgumentException");
+    if (!$$.prototype.isFunction(iterator)) throw ("NotFunctionSecondArgumentException");
     for (let i = 0, l = arr.length; i < l; i += 1) {
         iterator.call(null, arr[i]);
     }
@@ -47,43 +53,55 @@ $$.prototype.where = function (arr, iterator) {
     });
     return result;
 };
-//speaking truly i don't understand the sense of this function and it is not described in the task,
-//so, i decided to implement the function, that adds some elements to the array, putting them firstly to it
-$$.prototype.first = function (obj) {
-    if ($$.prototype.isArray(obj) && $$.prototype.isArray(this)) {
-        //return (Array.prototype.concat(obj,this)); if this method is too easy...
-        let result = [];
-        for (let i = 0, l1 = this.length, l2 = obj.length; i < l1 + l2; i++) {
-            if (i < l1) result[result.length] = this[i];
-            else result[result.length] = obj[i - l1];
-        }
-        return result;
+
+$$.prototype.first = function (arr, fn) {
+    if ($$.prototype.isArray(arr)) {
+        if (arr.length > 0) return fn.call(null, arr[0]);
+        else throw "EmptyArrayException"
     }
-    return this;
+    throw "NotArrayArgumentException";
 };
 
-//the same to previous, but adds some elements to the array, putting them as the last-s to it
-$$.prototype.last = function (obj) {
-    if ($$.prototype.isArray(obj) && $$.prototype.isArray(this)) {
-        //return (Array.prototype.concat(this,obj)); if this method is too easy...
-        let result = [];
-        for (let i = 0, l1 = this.length, l2 = obj.length; i < l1 + l2; i++) {
-            if (i < l1) result[result.length] = obj[i];
-            else result[result.length] = this[i - l1];
-        }
-        return result;
+$$.prototype.last = function (arr, fn) {
+    if ($$.prototype.isArray(arr)) {
+        if (arr.length > 0) return fn.call(null, arr[arr.length - 1]);
+        else throw "EmptyArrayException"
     }
-    return this;
+    throw "NotArrayArgumentException";
 };
 
-//one more function that has an unclear sense for me
-$$.prototype.select = $$.prototype.where;
-$$.prototype.skip = function(arr, number) {
-    if ($$.prototype.isArray(arr) && number < arr.length) {
-        //return Array.prototype.slice(number-1,arr.length);
-        // for (let i=)
-    }
+$$.prototype.select = function (arr, fn) {
+    let result = [];
+    $$.prototype.forEach(arr, function () {
+        result[result.length] = fn.call(arr, arr);
+    });
+    return result;
 };
-test1=[1,2,3,4,5,6];
-test2=test1[0-3];
-console.log(test2);
+
+$$.prototype.skip = function (arr, number) {
+    if ($$.prototype.isArray(arr)) {
+        if (number >= arr.length) return [];
+        else return Array.prototype.slice.call(arr, number, arr.length);
+    } else
+        throw "NotArrayArgumentException"
+};
+
+$$.prototype.take = function (arr, number, fn) {
+    if (!$$.prototype.isNumber(number)) throw "NotNumberSecondArgumentException";
+    if (!$$.prototype.isArray(arr)) throw "NotArrayFirstArgumentException";
+    if (!$$.prototype.isFunction(fn) && arguments.length >= 3) throw "NotFunctionThirdArgumentException";
+    if (arguments.length === 2) {
+        if (number >= arr.length) throw "NumberOutOfRangeException";
+        return arr[number];
+    }
+    if (arguments.length >= 3) {
+        if (number >= arr.length) throw "NumberOutOfRangeException";
+        return fn.call(arr[number], arr[number])
+    }
+    throw "IncorrectInputException";
+};
+
+
+test1 = [1, 2, 3, 4, 5, 6];
+
+console.log($$.prototype.take(test1, 2));
