@@ -168,8 +168,4 @@ let s = f.turnIntoChained();
 
 console.log(f.where((x) => x > 2).skip(2).first());
 console.log(f.where((x) => x > 2).skip(2).last(x=>x*x));
-function Lazy(fn) {
-    fn.call(args);
-}
-
 

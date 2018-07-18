@@ -21,5 +21,5 @@ function linearFold(obj, iterator, accu, thisArg) {
 
 //test example
 let someArray = [1, 10, 100,200];
-console.log(linearFold(someArray, (x,y)=>x+y)); // 311
+console.log(linearFold(someArray, (x,y)=>[x,y])); // 311
 console.log(linearFold(someArray, (x,y)=>x+y, 1000, this)); //1311
