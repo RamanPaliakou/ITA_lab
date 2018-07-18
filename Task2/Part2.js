@@ -1,4 +1,4 @@
-;(function () {
+define(['Part2'],function Part2() {
 
     function $$() {
         this._arrayV = [1, 2, 3, 4, 5, 6, 7];
@@ -160,12 +160,11 @@
     };
 
     //export
-    this.Lib = $$; //this must be equal window!!!
-})();
+    return {
+        main: $$
+    }
 
-let f = new Lib();
-let s = f.turnIntoChained();
+});
 
-console.log(f.where((x) => x > 2).skip(2).first());
-console.log(f.where((x) => x > 2).skip(2).last(x=>x*x));
+
 
