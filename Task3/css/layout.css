@@ -1,0 +1,22 @@
+.header {
+    background: grey;
+    min-height: 220px;
+    padding: 10px 0 10px 0;
+}
+.container {
+    width: 1020px;
+    padding: 0 auto 0 auto;
+    margin: 0 auto 0 auto;
+}
+.forecasts {
+    background: orange;
+    padding: 10px 0 0 0;
+
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+.box {
+    box-sizing: border-box;
+}

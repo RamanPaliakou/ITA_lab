@@ -1,0 +1,9 @@
+.sunny {
+    background: url(../images/Sunny.png)center top no-repeat;
+    background-size: contain;
+
+}
+.test-time {
+    background: url(../images/test-time.jpg) center top no-repeat;
+    background-size: contain;
+}

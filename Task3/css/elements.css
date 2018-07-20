@@ -1,0 +1,95 @@
+.logo {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    margin-right: 10px;
+    display: inline-block;
+}
+.panel {
+    height: 200px;
+    width: 770px;
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    overflow: hidden;
+}
+.site-name {
+    width: 750px;
+    height: 30px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.button-panel {
+    width: 750px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.compare-panel {
+    width: 750px;
+    height: 70px;
+    border: 1px solid black;
+}
+.forecast-container {
+    width: 980px;
+    height: auto;
+    min-height: 100px;
+    margin: 10px 0 0 0;
+    background: mintcream;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.forecast-container-properties {
+    width: 980px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px 5px 0 5px;
+}
+.forecast {
+    width:220px;
+    height: 100px;
+    margin: 5px 5px 5px 5px;
+    padding: 1px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.forecast-image,
+.forecast-time{
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    border: 1px solid black;
+    margin: auto 5px auto 0;
+
+}
+.forecast-time {
+    margin-right: 0;
+}
+.forecast-info {
+    width: 90px;
+    height: 90px;
+    margin: auto 5px auto 0;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.text-info {
+    display: block;
+    font-size: 16px;
+    margin: auto 0 auto 0;
+    border: 1px solid black;
+
+}
