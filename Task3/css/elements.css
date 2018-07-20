@@ -71,6 +71,7 @@
     max-height: 50px;
     border: 1px solid black;
     margin: auto 5px auto 0;
+    background-size: contain;
 
 }
 .forecast-time {

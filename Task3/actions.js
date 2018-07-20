@@ -2,7 +2,7 @@
 * TEMPLATES
 * */
 let fc = '<div class="forecast box">\n' +
-    '                <div class="forecast-image box sunny"></div>\n' +
+    '                <div class="forecast-image box"></div>\n' +
     '                <div class="forecast-info box">\n' +
     '                    <div class="min-temperature text-info">10\'C</div>\n' +
     '                    <div class="max-temperature text-info">15\'C</div>\n' +
@@ -17,7 +17,7 @@ let fp = '<div id="forecast-panel-template" class="forecast-container box">\n' +
     '                <span class="forecast-property-city-name">Moscow</span>\n' +
     '                <span class="forecast-property-date">2012-01-25 Post Meridiem </span>\n' +
     '            </div>\n' +
-    '        </div>';
+    '       </div>';
 
 let testMeteo = {
     city: 'Moscow',
@@ -49,8 +49,10 @@ function htmlToElement(html) {
 * END ADD FUNCTIONS
 * MAIN FUNCTIONS
 * */
-var PANELARR=[];
-function AddForecast(data,panelNo) {
+var PANELARR = [];
+var CURRENTDISPLAY={};
+
+function AddForecast(data, panelNo) {
     let forecast = htmlToElement(fc);
     let a = testid() + testid();
     forecast.id = a;
@@ -58,6 +60,9 @@ function AddForecast(data,panelNo) {
     forecast.querySelector('.forecast-info').querySelector('.max-temperature').innerHTML = data.maxTemperature;
     forecast.querySelector('.forecast-info').querySelector('.pressure').innerHTML = data.pressure;
     forecast.querySelector('.forecast-info').querySelector('.humidity').innerHTML = data.humidity;
+    let s= "images/" + data.image +".png";
+    console.log(s);
+    forecast.querySelector('.forecast-image').style.backgroundImage = "url("+s+")";
     document.getElementById(PANELARR[panelNo]).appendChild(forecast);
 }
 
@@ -79,4 +84,37 @@ function CreateForecast(obj) {
     let fcast_info = document.createElement('fc st_info');
     fcast_info.className += "forecast-info box";
     let fcast_info_maxtemp = document.createElement('fcast_info');
+}
+
+function DoApiCall() {
+    fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&units=metric&APPID=41fbc5b96ec3cb955eab44d9786d563b")
+        .then((resp) => resp.json()) // Transform the data into json
+        .then(function (data) {
+            let res= CURRENTDISPLAY = ComposeFromRecieved(data);
+            console.log(data);
+            return res;
+        });
+}
+function BuildState() {
+    AddPanel(CURRENTDISPLAY[0]);
+    for (let i=0;i<CURRENTDISPLAY.length;i++) {
+        AddForecast(CURRENTDISPLAY[i],PANELARR.length-1);
+    }
+}
+function ComposeFromRecieved(obj) {
+    let result=[];
+    for (let i = 0; i < obj.list.length; i++) {
+        let temp = {
+            city: obj.city.name,
+            minTemperature: obj.list[i].main.temp_min,
+            maxTemperature: obj.list[i].main.temp_max,
+            humidity: obj.list[i].main.humidity,
+            pressure: obj.list[i].main.pressure,
+            state: obj.list[i].weather[0].main,
+            time: obj.list[i].dt_txt,
+            image: obj.list[i].weather[0].icon
+        };
+        result.push(temp);
+    }
+    return result;
 }
