@@ -50,7 +50,7 @@ function htmlToElement(html) {
 * MAIN FUNCTIONS
 * */
 var PANELARR = [];
-var CURRENTDISPLAY={};
+var CURRENTDISPLAY = {};
 
 function AddForecast(data, panelNo) {
     let forecast = htmlToElement(fc);
@@ -60,16 +60,16 @@ function AddForecast(data, panelNo) {
     forecast.querySelector('.forecast-info').querySelector('.max-temperature').innerHTML = data.maxTemperature;
     forecast.querySelector('.forecast-info').querySelector('.pressure').innerHTML = data.pressure;
     forecast.querySelector('.forecast-info').querySelector('.humidity').innerHTML = data.humidity;
-    let s= "images/" + data.image +".png";
-    console.log(s);
-    forecast.querySelector('.forecast-image').style.backgroundImage = "url("+s+")";
+    forecast.querySelector('.forecast-image').style.backgroundImage = "url(" + "images/" + data.image + ".png" + ")";
+    forecast.querySelector('.forecast-time').style.backgroundImage = "url(" + "images/" + data.time + "-oclock.png" + ")";
+
     document.getElementById(PANELARR[panelNo]).appendChild(forecast);
 }
 
 function AddPanel(obj) {
     let panel = htmlToElement(fp);
     panel.querySelector('.forecast-container-properties').querySelector('.forecast-property-city-name').innerText = obj.city;
-    panel.querySelector('.forecast-container-properties').querySelector('.forecast-property-date').innerText = obj.time.toString();
+    panel.querySelector('.forecast-container-properties').querySelector('.forecast-property-date').innerText = obj.timePeriod;
     let a = testid() + testid();
     panel.id = a;
     document.getElementById('addf').appendChild(panel);
@@ -90,20 +90,34 @@ function DoApiCall() {
     fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&units=metric&APPID=41fbc5b96ec3cb955eab44d9786d563b")
         .then((resp) => resp.json()) // Transform the data into json
         .then(function (data) {
-            let res= CURRENTDISPLAY = ComposeFromRecieved(data);
+            let res = CURRENTDISPLAY = ComposeFromRecieved(data);
             console.log(data);
             return res;
         });
 }
+
 function BuildState() {
-    AddPanel(CURRENTDISPLAY[0]);
-    for (let i=0;i<CURRENTDISPLAY.length;i++) {
-        AddForecast(CURRENTDISPLAY[i],PANELARR.length-1);
+    for (let i=0;i<CURRENTDISPLAY.length;i+=4) {
+        AddPanel(CURRENTDISPLAY[i]);
+        for (let j = i; j < 4+i; j++) {
+            AddForecast(CURRENTDISPLAY[j], PANELARR.length - 1);
+        }
     }
 }
+
 function ComposeFromRecieved(obj) {
-    let result=[];
+    let result = [];
     for (let i = 0; i < obj.list.length; i++) {
+        let hours = new Date(obj.list[i].dt_txt);
+        let period = "";
+        hours = hours.getHours();
+        if (hours >= 12) {
+            hours -= 12;
+            period = "PM";
+        }
+        else {
+            period = "AM"
+        }
         let temp = {
             city: obj.city.name,
             minTemperature: obj.list[i].main.temp_min,
@@ -111,8 +125,9 @@ function ComposeFromRecieved(obj) {
             humidity: obj.list[i].main.humidity,
             pressure: obj.list[i].main.pressure,
             state: obj.list[i].weather[0].main,
-            time: obj.list[i].dt_txt,
-            image: obj.list[i].weather[0].icon
+            time: hours,
+            image: obj.list[i].weather[0].icon,
+            timePeriod: period
         };
         result.push(temp);
     }
