@@ -1,7 +1,6 @@
 .logo {
     height: 200px;
-    width: 200px;
-    border: 1px solid black;
+    min-width: 200px;
     margin-right: 10px;
     display: inline-block;
 }
@@ -9,22 +8,24 @@
     height: 200px;
     width: 770px;
     padding: 10px;
-    border: 1px solid black;
     display: inline-block;
     overflow: hidden;
 }
 .site-name {
-    width: 750px;
-    height: 30px;
-    border: 1px solid black;
+    width: 350px;
+    height: 110px;
     margin-bottom: 10px;
-    text-align: right;
+    text-align: left;
+    font-family: Handwriting, sans-serif;
+    font-size: 50px;
+    float: left;
 }
 .button-panel {
-    width: 750px;
-    height: 60px;
+    width: 350px;
+    height: 140px;
     margin-bottom: 10px;
-    border: 1px solid black;
+    float:right;
+    padding: 20px;
 }
 .compare-panel {
     width: 750px;
@@ -63,8 +64,12 @@
     align-items: center;
     align-content: center;
 }
-.forecast-image,
-.forecast-time{
+.weather-time {
+    height: 90px;
+    width: 50px;
+}
+
+.forecast-image{
     width: 50px;
     height: 50px;
     max-width: 50px;
@@ -72,13 +77,9 @@
     border: 1px solid black;
     margin: auto 5px auto 0;
     background-size: contain;
-
-}
-.forecast-time {
-    margin-right: 0;
 }
 .forecast-info {
-    width: 90px;
+    width: 140px;
     height: 90px;
     margin: auto 5px auto 0;
     border: 1px solid black;
@@ -93,4 +94,8 @@
     margin: auto 0 auto 0;
     border: 1px solid black;
 
+}
+.waiter {
+    width: 200px;
+    height: 200px;
 }

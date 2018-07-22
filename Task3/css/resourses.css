@@ -9,6 +9,18 @@
 }
 
 .logo-picture {
-    background: url(../images/logo.jpg) center top no-repeat;
+    background: url(../images/sun-logo.png) center top no-repeat;
+    background-size: contain;
+}
+.header-picture {
+    background: url(../images/cloud-header.png) center top no-repeat;
+    background-size: contain;
+}
+.waiter-picture {
+    background: url(../images/wait.gif) center top no-repeat;
     background-size: cover;
+}
+.button-panel-picture {
+    background: url(../images/button-bck.png) center top no-repeat;
+    background-size: contain;
 }

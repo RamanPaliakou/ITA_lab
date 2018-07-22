@@ -6,17 +6,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header class="header box">
-    <div class="container box">
+<header class="header box ">
+    <div class="container box header-picture">
         <div class="logo box logo-picture"></div>
         <div class="panel box">
-            <div class="site-name box"></div>
-            <div class="button-panel box">
-                <input  type="button" value="build all" onclick="buildAllDataForecasts()" />
-                <input  type="button" value="remove all" onclick="RemoveAll()" />
-                <input  type="button" value="do request" onclick="RemoveAll()" />
-            </div>
-            <div class="compare-panel box">
+            <div class="site-name box">Know your weather!</div>
+            <div class="button-panel box button-panel-picture">
+                <input  type="button" value="build all" onclick="displayForecastByName('dsvajksfdhkjsh')" />
                 <select class="city-selector">
                     <option value="Moscow" onclick=" displayForecastById('524901') ">Moscow</option>
                     <option value="Minsk" onclick=" displayForecastById('625144')">Minsk</option>
