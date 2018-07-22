@@ -8,22 +8,28 @@
 <body>
 <header class="header box">
     <div class="container box">
-        <div class="logo box sunny"></div>
+        <div class="logo box logo-picture"></div>
         <div class="panel box">
             <div class="site-name box"></div>
             <div class="button-panel box">
-                <input type="button" value="create panel" onclick="AddPanel(testMeteo)" )/>
-                <input  type="button" value="create cast" onclick="AddForecast(testMeteo,0)" )/>
-                <input  type="button" value="do api call" onclick="DoApiCall()" )/>
-                <input  type="button" value="build all" onclick="BuildState()" )/>
+                <input  type="button" value="build all" onclick="buildAllDataForecasts()" />
+                <input  type="button" value="remove all" onclick="RemoveAll()" />
+                <input  type="button" value="do request" onclick="RemoveAll()" />
             </div>
-            <div class="compare-panel box"></div>
+            <div class="compare-panel box">
+                <select class="city-selector">
+                    <option value="Moscow" onclick=" displayForecastById('524901') ">Moscow</option>
+                    <option value="Minsk" onclick=" displayForecastById('625144')">Minsk</option>
+                    <option value="London" onclick=" displayForecastById('2643743')">London</option>
+                    <option value="Los-Angeles" onclick=" displayForecastById('5368361')">Los-Angeles</option>
+                    <option value="Paris" onclick=" displayForecastById('2988507')">Paris</option>
+                </select>
+            </div>
         </div>
     </div>
 </header>
 <section class="forecasts">
     <div class="container" id="addf">
-
 </section>
 <script src="actions.js"></script>
 </body>

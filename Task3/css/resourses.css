@@ -7,3 +7,8 @@
     background: url(../images/test-time.jpg) center top no-repeat;
     background-size: contain;
 }
+
+.logo-picture {
+    background: url(../images/logo.jpg) center top no-repeat;
+    background-size: cover;
+}

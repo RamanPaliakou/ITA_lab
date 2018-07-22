@@ -24,4 +24,16 @@ req.onreadystatechange = function() {
 };
 req.open("GET", "https://ipapi.co/json/", true);
 req.send();
+
+
+_________________________
+var promise = $.getJSON('http://hipsterjesus.com/api/');
+
+promise.done(function(data) {
+  $('body').append(data.text);
+});
+
+promise.fail(function() {
+  $('body').append('<p>Oh no, something went wrong!</p>');
+});
  */
