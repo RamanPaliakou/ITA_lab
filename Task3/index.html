@@ -6,27 +6,76 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
 <header class="header box ">
     <div class="container box header-picture">
         <div class="logo box logo-picture"></div>
         <div class="panel box">
             <div class="site-name box">Know your weather!</div>
-            <div class="button-panel box button-panel-picture">
-                <input  type="button" value="build all" onclick="displayForecastByName('dsvajksfdhkjsh')" />
-                <select class="city-selector">
-                    <option value="Moscow" onclick=" displayForecastById('524901') ">Moscow</option>
-                    <option value="Minsk" onclick=" displayForecastById('625144')">Minsk</option>
-                    <option value="London" onclick=" displayForecastById('2643743')">London</option>
-                    <option value="Los-Angeles" onclick=" displayForecastById('5368361')">Los-Angeles</option>
-                    <option value="Paris" onclick=" displayForecastById('2988507')">Paris</option>
-                </select>
-            </div>
         </div>
     </div>
 </header>
-<section class="forecasts">
-    <div class="container" id="addf">
+
+<section class="controls box">
+
+    <div class="container box controls-container">
+
+        <div class="button-panel box button-panel-picture">
+            <div>Please select a city to sisplay weather in:</div>
+            <select class="city-selector" id="one-city-selector">
+                <option value="524901">Moscow</option>
+                <option value="625144">Minsk</option>
+                <option value="2643743">London</option>
+                <option value="5368361">Los-Angeles</option>
+                <option value="2988507">Paris</option>
+            </select>
+            <div>
+                <input type="button" value="3-hour forecast" onclick="displaySingleForecast(3)"/>
+                <input type="button" value="1-day forecast" onclick="displaySingleForecast(24)"/>
+                <input type="button" value="5-day forecast" onclick="displaySingleForecast(120)"/>
+            </div>
+        </div>
+        <div class="button-panel box button-panel-picture">
+            <div>To compare two forecasts please specify two cities:</div>
+            <select class="city-selector" id="compare-one-city-selector">
+                <option value="524901">Moscow</option>
+                <option value="625144">Minsk</option>
+                <option value="2643743">London</option>
+                <option value="5368361">Los-Angeles</option>
+                <option value="2988507">Paris</option>
+            </select>
+            <select class="city-selector" id="compare-two-city-selector">
+                <option value="524901">Moscow</option>
+                <option value="625144">Minsk</option>
+                <option value="2643743">London</option>
+                <option value="5368361">Los-Angeles</option>
+                <option value="2988507">Paris</option>
+            </select>
+            <input type="button" value="request" onclick="Compare('2988507','5368361')"/>
+        </div>
+        <div class="button-panel box button-panel-picture">
+            <span>Or, enter your city:</span>
+            <input type="text" id="manual-input-city" >
+            <!--<input type="range" id="manual-time-selector" name="forecast period"
+                   min="3" max="120" />
+            <input type="checkbox" id="manual-time-flag" name="custom time selector"
+                   value="set" />
+            <label for="manual-time-selector">Enable custom timing</label>-->
+            <input type="button" value="get forecast" onclick="displayForecastByName()"/>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div>Request error. please check your input.</div>
+        </div>
+    </div>
 </section>
+<section class="forecasts">
+    <div class="container" id="parent">
+    </div>
+</section>
+
 <script src="actions.js"></script>
 </body>
 </html>

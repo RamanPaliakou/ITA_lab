@@ -10,22 +10,22 @@
     padding: 10px;
     display: inline-block;
     overflow: hidden;
+    background: none;
 }
 .site-name {
-    width: 350px;
     height: 110px;
     margin-bottom: 10px;
     text-align: left;
     font-family: Handwriting, sans-serif;
-    font-size: 50px;
+    font-size: 90px;
     float: left;
 }
 .button-panel {
-    width: 350px;
+    width: 320px;
     height: 140px;
     margin-bottom: 10px;
-    float:right;
     padding: 20px;
+    text-align: center;
 }
 .compare-panel {
     width: 750px;
@@ -33,11 +33,10 @@
     border: 1px solid black;
 }
 .forecast-container {
-    width: 980px;
     height: auto;
     min-height: 100px;
     margin: 10px 0 0 0;
-    background: mintcream;
+    background: #ffffff;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -83,7 +82,7 @@
     height: 90px;
     margin: auto 5px auto 0;
     border: 1px solid black;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -92,10 +91,51 @@
     display: block;
     font-size: 16px;
     margin: auto 0 auto 0;
-    border: 1px solid black;
-
 }
 .waiter {
+    margin: 0 auto;
     width: 200px;
     height: 200px;
+}
+
+/*----*/
+ .modal {
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     opacity: 0;
+     visibility: hidden;
+     transform: scale(1.1);
+     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+ }
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
