@@ -17,11 +17,10 @@
 </header>
 
 <section class="controls box">
-
     <div class="container box controls-container">
 
         <div class="button-panel box button-panel-picture">
-            <div>Please select a city to sisplay weather in:</div>
+            <div>Please select a city to display weather in:</div>
             <select class="city-selector" id="one-city-selector">
                 <option value="524901">Moscow</option>
                 <option value="625144">Minsk</option>
@@ -55,21 +54,20 @@
         </div>
         <div class="button-panel box button-panel-picture">
             <span>Or, enter your city:</span>
-            <input type="text" id="manual-input-city" >
-            <!--<input type="range" id="manual-time-selector" name="forecast period"
-                   min="3" max="120" />
-            <input type="checkbox" id="manual-time-flag" name="custom time selector"
-                   value="set" />
-            <label for="manual-time-selector">Enable custom timing</label>-->
+            <input type="text" id="manual-input-city">
             <input type="button" value="get forecast" onclick="displayForecastByName()"/>
         </div>
     </div>
-    <div class="modal">
+
+    <div class="modal" id="request-error-modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div>Request error. please check your input.</div>
+            <span class="modal-close-button">&times;</span>
+            <div class="modal-text">Request error. please check your input.</div>
         </div>
     </div>
+    <div class="floatTip" id="floatTip"></div>
+
+
 </section>
 <section class="forecasts">
     <div class="container" id="parent">

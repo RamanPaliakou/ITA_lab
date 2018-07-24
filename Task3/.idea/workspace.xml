@@ -14,24 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="62" column="77" lean-forward="true" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
-              <folding>
-                <element signature="e#3046#3053#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+            <state relative-caret-position="754">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="n#!!block;n#randomStringGenerator#0;n#BuildActions#0" />
                 <element signature="n#!!block;n#htmlToElement#0;n#BuildActions#0" />
                 <element signature="n#!!block;n#addForecast#0;n#LayoutActions#0" />
@@ -39,12 +28,40 @@
                 <element signature="n#!!block;n#removeWaiter#0;n#LayoutActions#0" />
                 <element signature="n#!!block;n#addPanel#0;n#LayoutActions#0" />
                 <element signature="n#!!block;n#displayCurrentForecast#0;n#LayoutActions#0" />
-                <element signature="n#!!block;n#removeAllChilds#0;n#LayoutActions#0" />
                 <element signature="n#!!block;n#clearPanels#0;n#LayoutActions#0" />
-                <element signature="n#!!block;n#displayComparePanlels#0;n#LayoutActions#0" />
-                <element signature="n#!!block;n#doApiCallbyId#0;n#LayoutActions#0" />
-                <element signature="n#!!block;n#composeFromRecieved#0;n#LayoutActions#0" />
-                <element signature="n#!!block;n#getTimePeriod#0;n#LayoutActions#0" />
+                <element signature="n#!!block;n#displayDoubleLayout#0;n#LayoutActions#0" />
+                <element signature="n#!!block;n#displaySingleForecast#0" />
+                <element signature="n#!!block;n#displayForecastByName#0" />
+                <element signature="n#!!block;n#clearAll#0" />
+                <element signature="n#!!block;n#Compare#0" />
+                <element signature="n#!!block;n#placeallevents#0" />
+                <element signature="n#!!block;n#toggleModal#0" />
+                <element signature="n#!!block;n#windowOnClick#0" />
+                <element signature="n#!!block;n#moveTip#0" />
+                <element signature="n#!!block;n#toolTipShow#0" />
+                <element signature="n#!!block;n#handleEventonPicture#0;n#!!block;n#toolTipShow#0" />
+                <element signature="n#!!block;n#toolTipHide#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTMLCreateTemplates.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="67" column="46" lean-forward="true" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -53,8 +70,8 @@
       <file leaf-file-name="elements.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/elements.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1133">
-              <caret line="117" column="37" lean-forward="true" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+            <state relative-caret-position="1004">
+              <caret line="142" column="27" lean-forward="true" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -74,6 +91,7 @@
     <findStrings>
       <find>templa</find>
       <find>but</find>
+      <find>console.log</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -81,16 +99,17 @@
       <list>
         <option value="$PROJECT_DIR$/layout.css" />
         <option value="$PROJECT_DIR$/actions1.js" />
-        <option value="$PROJECT_DIR$/templates.js" />
-        <option value="$PROJECT_DIR$/querries.js" />
         <option value="$PROJECT_DIR$/elements.js" />
         <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/resourses.css" />
         <option value="$PROJECT_DIR$/css/layout.css" />
-        <option value="$PROJECT_DIR$/css/elements.css" />
-        <option value="$PROJECT_DIR$/actions.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/elements.css" />
+        <option value="$PROJECT_DIR$/querries.js" />
+        <option value="$PROJECT_DIR$/templates.js" />
+        <option value="$PROJECT_DIR$/HTMLCreateTemplates.js" />
+        <option value="$PROJECT_DIR$/actions.js" />
       </list>
     </option>
   </component>
@@ -104,8 +123,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2719" />
-    <option name="y" value="-16" />
+    <option name="x" value="372" />
+    <option name="y" value="-8" />
     <option name="width" value="656" />
     <option name="height" value="496" />
   </component>
@@ -114,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,10 +164,10 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WORK\WORK\ITA_lab\Task3\css" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WORK\WORK\ITA_lab\Task3\css" />
     </key>
   </component>
@@ -193,17 +212,18 @@
       <workItem from="1532250474657" duration="8228000" />
       <workItem from="1532273762229" duration="8974000" />
       <workItem from="1532336972818" duration="12218000" />
+      <workItem from="1532424737811" duration="20176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75562000" />
+    <option name="totallyTimeSpent" value="95738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.069270834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.069270834" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -212,7 +232,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39935064" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -230,16 +250,63 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2756">
+          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#randomStringGenerator#0;n#BuildActions#0" />
+            <element signature="n#!!block;n#htmlToElement#0;n#BuildActions#0" />
+            <element signature="n#!!block;n#addForecast#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#addWaiter#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#removeWaiter#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#addPanel#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#displayCurrentForecast#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#clearPanels#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#displayDoubleLayout#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#displaySingleForecast#0" />
+            <element signature="n#!!block;n#displayForecastByName#0" />
+            <element signature="n#!!block;n#clearAll#0" />
+            <element signature="n#!!block;n#Compare#0" />
+            <element signature="n#!!block;n#placeallevents#0" />
+            <element signature="n#!!block;n#toggleModal#0" />
+            <element signature="n#!!block;n#windowOnClick#0" />
+            <element signature="n#!!block;n#moveTip#0" />
+            <element signature="n#!!block;n#toolTipShow#0" />
+            <element signature="n#!!block;n#handleEventonPicture#0;n#!!block;n#toolTipShow#0" />
+            <element signature="n#!!block;n#toolTipHide#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2600">
+          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
-            <element signature="e#3046#3053#1" expanded="true" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -251,7 +318,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/querries.js" />
+    <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js" />
     <entry file="file://$PROJECT_DIR$/css/elements.css" />
     <entry file="file://$PROJECT_DIR$/css/resourses.css" />
     <entry file="file://$PROJECT_DIR$/actions.js" />
@@ -262,7 +329,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/querries.js" />
+    <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js" />
     <entry file="file://$PROJECT_DIR$/elements.js" />
     <entry file="file://$PROJECT_DIR$/css/elements.css" />
     <entry file="file://$PROJECT_DIR$/css/resourses.css" />
@@ -275,7 +342,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/querries.js" />
+    <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js" />
     <entry file="file://$PROJECT_DIR$/elements.js" />
     <entry file="file://$PROJECT_DIR$/css/elements.css" />
     <entry file="file://$PROJECT_DIR$/css/resourses.css" />
@@ -289,7 +356,7 @@
     <entry file="file://D:/../PRELAB/site/test.html" />
     <entry file="file://D:/../PRELAB/site/IdProject/index.html" />
     <entry file="file://$PROJECT_DIR$/actions.js" />
-    <entry file="file://$PROJECT_DIR$/templates.js" />
+    <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js" />
     <entry file="file://$PROJECT_DIR$/elements.js" />
     <entry file="file://$PROJECT_DIR$/../Task1/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -308,7 +375,6 @@
     <entry file="file://$PROJECT_DIR$/css/resourses.css" />
     <entry file="file://$PROJECT_DIR$/css/base.css" />
     <entry file="file://$PROJECT_DIR$/css/main.css" />
-    <entry file="file://$PROJECT_DIR$/querries.js" />
     <entry file="file://$PROJECT_DIR$/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -316,18 +382,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="67" column="46" lean-forward="true" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/elements.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1133">
-          <caret line="117" column="37" lean-forward="true" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+        <state relative-caret-position="1004">
+          <caret line="142" column="27" lean-forward="true" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLCreateTemplates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+        <state relative-caret-position="754">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#randomStringGenerator#0;n#BuildActions#0" />
             <element signature="n#!!block;n#htmlToElement#0;n#BuildActions#0" />
             <element signature="n#!!block;n#addForecast#0;n#LayoutActions#0" />
@@ -335,22 +419,19 @@
             <element signature="n#!!block;n#removeWaiter#0;n#LayoutActions#0" />
             <element signature="n#!!block;n#addPanel#0;n#LayoutActions#0" />
             <element signature="n#!!block;n#displayCurrentForecast#0;n#LayoutActions#0" />
-            <element signature="n#!!block;n#removeAllChilds#0;n#LayoutActions#0" />
             <element signature="n#!!block;n#clearPanels#0;n#LayoutActions#0" />
-            <element signature="n#!!block;n#displayComparePanlels#0;n#LayoutActions#0" />
-            <element signature="n#!!block;n#doApiCallbyId#0;n#LayoutActions#0" />
-            <element signature="n#!!block;n#composeFromRecieved#0;n#LayoutActions#0" />
-            <element signature="n#!!block;n#getTimePeriod#0;n#LayoutActions#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="62" column="77" lean-forward="true" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
-          <folding>
-            <element signature="e#3046#3053#1" expanded="true" />
+            <element signature="n#!!block;n#displayDoubleLayout#0;n#LayoutActions#0" />
+            <element signature="n#!!block;n#displaySingleForecast#0" />
+            <element signature="n#!!block;n#displayForecastByName#0" />
+            <element signature="n#!!block;n#clearAll#0" />
+            <element signature="n#!!block;n#Compare#0" />
+            <element signature="n#!!block;n#placeallevents#0" />
+            <element signature="n#!!block;n#toggleModal#0" />
+            <element signature="n#!!block;n#windowOnClick#0" />
+            <element signature="n#!!block;n#moveTip#0" />
+            <element signature="n#!!block;n#toolTipShow#0" />
+            <element signature="n#!!block;n#handleEventonPicture#0;n#!!block;n#toolTipShow#0" />
+            <element signature="n#!!block;n#toolTipHide#0" />
           </folding>
         </state>
       </provider>

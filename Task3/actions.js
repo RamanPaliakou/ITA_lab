@@ -1,11 +1,18 @@
-/*
-import {forecast_template} from "./elements";
-import {forecast_panel_template} from "./elements";
-are impossible due to site is not in a server and CORS-policy disallows the requests
-*/
-let forecast_template = '<div class="forecast box">\n' +
-    '                <div class="weather-time box">\n' +
-    '                    <div class="forecast-image box"></div>\n' +
+/*require.config({
+    baseUrl: "",
+    paths: {
+        "some": ""
+    },
+    waitSeconds: 15
+});
+require(['HTMLCreateTemplates'], function (HTMLCreateTemplates) {
+    let forecast_template = HTMLCreateTemplates.forecast_template;
+    let forecast_panel_template = HTMLCreateTemplates.forecast_panel_template;
+
+});*/
+let forecast_template = '<div class="forecast box" >\n' +
+    '                <div class="weather-time box" >\n' +
+    '                    <div class="forecast-image box" ></div>\n' +
     '                    <span class="forecast-time box"></span>\n' +
     '               </div>\n                           ' +
     '                <div class="forecast-info box">\n' +
@@ -21,12 +28,11 @@ let forecast_panel_template = '<div id="forecast-panel-template" class="forecast
     '                <span class="forecast-panel-title">Moscow</span>\n' +
     '            </div>\n' +
     '       </div>';
+"use strict";
 
-let forecast_inner_panel_template = '<div id="forecast-panel-template" class="forecast-container box">\n' +
-    '            <div class="forecast-container-properties box">\n' +
-    '                <span class="forecast-property-date">2012-01-25 Post Meridiem </span>\n' +
-    '            </div>\n' +
-    '       </div>';
+function t() {
+    return "test";
+}
 
 class BuildActions {
 
@@ -45,7 +51,6 @@ class BuildActions {
     };
 }
 
-
 class LayoutActions {
     constructor(appId, parentId, buildClass) {
         this._displayedPanels = [];
@@ -56,7 +61,7 @@ class LayoutActions {
         this._GLOBALPARENTID = parentId;
         this._buildClass = buildClass;
         this._fetchState = false;
-        this._waiterAdded=false;
+        this._waiterAdded = false;
     };
 
 //methods for displaying
@@ -76,16 +81,16 @@ class LayoutActions {
     addWaiter() {
         let waiter = document.createElement("div");
         waiter.className += "waiter waiter-picture";
-        waiter.id=this._buildClass.randomStringGenerator();
+        waiter.id = this._buildClass.randomStringGenerator();
         document.getElementById(this._GLOBALPARENTID).appendChild(waiter);
-        this._waiterAdded=waiter.id;
+        this._waiterAdded = waiter.id;
     }
 
     removeWaiter() {
-        if(this._waiterAdded !== false) {
+        if (this._waiterAdded !== false) {
             var element = document.getElementById(this._waiterAdded);
             element.parentNode.removeChild(element);
-            this._waiterAdded=false;
+            this._waiterAdded = false;
         }
     }
 
@@ -116,14 +121,9 @@ class LayoutActions {
                 this.addForecast(forecast_template, this._displayedWeatherState[j], panelNo);
                 j++;
                 curTime += period;
-                if (curTime >=maxTime) break;
+                if (curTime >= maxTime) break;
             }
         }
-    }
-
-    removeAllChilds() {
-        document.getElementById(this._GLOBALPARENTID).innerHTML = "";
-        this._displayedPanels = [];
     }
 
     clearPanels() {
@@ -134,32 +134,41 @@ class LayoutActions {
         this._displayedPanels = [];
     };
 
-    displayCompareMode(city1, city2) {
-        let context = this;
+    displayDoubleLayout() {
         let w = document.getElementById(this._GLOBALPARENTID);
         let maxwidth = (w.offsetWidth - 10) / 2;
-        console.log(maxwidth);
         const leftPanelId = this._buildClass.randomStringGenerator();
         const rightPanelId = this._buildClass.randomStringGenerator();
         let p1 = document.createElement('div');
-        p1.style.width = maxwidth+'px';
+        p1.style.width = maxwidth + 'px';
         p1.id = leftPanelId;
         p1.style.cssFloat = 'left';
         let p2 = document.createElement('div');
-        p2.style.width = maxwidth+'px';
+        p2.style.width = maxwidth + 'px';
         p2.id = rightPanelId;
         p2.style.cssFloat = 'right';
         document.getElementById(this._GLOBALPARENTID).appendChild(p1);
         document.getElementById(this._GLOBALPARENTID).appendChild(p2);
+        return {
+            left: leftPanelId,
+            right: rightPanelId
+        }
+    }
+
+    displayCompareMode(city1, city2) {
+        let layout = this.displayDoubleLayout(),
+            leftPanel = layout.left,
+            rightPanel = layout.right;
+
         this.doApiCallbyId(city1).then(
-            function () {
-                context.removeWaiter();
-                context.displayCurrentForecast(48, 3, p1.id)
+            () => {
+                this.removeWaiter();
+                this.displayCurrentForecast(48, 3, leftPanel)
             });
         this.doApiCallbyId(city2).then(
-            function () {
-                context.removeWaiter();
-                context.displayCurrentForecast(48, 3, p2.id)
+            () => {
+                this.removeWaiter();
+                this.displayCurrentForecast(48, 3, rightPanel)
             });
     }
 
@@ -172,7 +181,7 @@ class LayoutActions {
             .then(data => data.json())
             .then(function (data) {
                 if (data.cod !== "200") {
-                    throw new Error('incorrect input data');
+                    throw new Error('api request mistake encountered, cod: ' + data.cod + ' ' + data.message);
                 }
                 result = context.composeFromRecieved(data);
                 context._displayedWeatherState = result;
@@ -188,7 +197,7 @@ class LayoutActions {
             .then(data => data.json())
             .then(function (data) {
                 if (data.cod !== "200") {
-                    throw new Error('incorrect input data');
+                    throw new Error('api request mistake encountered, cod: ' + data.cod + ' ' + data.message);
                 }
                 result = context.composeFromRecieved(data);
                 context._displayedWeatherState = result;
@@ -225,38 +234,37 @@ class LayoutActions {
 
 }
 
-
 let la = new LayoutActions("41fbc5b96ec3cb955eab44d9786d563b", "parent", BuildActions);
-
 
 function displaySingleForecast(time) {
     let d = document.getElementById("one-city-selector");
-    let id= d.options[d.selectedIndex].value;
+    let id = d.options[d.selectedIndex].value;
     la.clearPanels();
     la.addWaiter();
     la.doApiCallbyId(id).then(function () {
         la.removeWaiter();
-        la.displayCurrentForecast(time,3)
-    }).catch( function() {
+        la.displayCurrentForecast(time, 3)
+    }).catch(function () {
         la.removeWaiter();
         toggleModal();
+    }).then(function () {
+        placeallevents();
     });
 }
 
-
 function displayForecastByName() {
     let d = document.getElementById("manual-input-city");
-    let name=d.value;
-    console.log(name);
+    let name = d.value;
     la.clearPanels();
     la.addWaiter();
     la.doApiCallbyName(name).then(function () {
         la.removeWaiter();
-        la.displayCurrentForecast(24,3)
-    }).catch( function() {
+        la.displayCurrentForecast(24, 3)
+    }).catch(function (err) {
         la.removeWaiter();
-        toggleModal();
+        toggleModal(err);
     });
+    placeallevents();
 
 }
 
@@ -266,22 +274,29 @@ function clearAll() {
 
 function Compare() {
     let d = document.getElementById("compare-one-city-selector");
-    let var1= d.options[d.selectedIndex].value;
-    d= document.getElementById("compare-two-city-selector");
-    let var2= d.options[d.selectedIndex].value;
+    let var1 = d.options[d.selectedIndex].value;
+    d = document.getElementById("compare-two-city-selector");
+    let var2 = d.options[d.selectedIndex].value;
     la.clearPanels();
     la.addWaiter();
     la.displayCompareMode(var1, var2);
+    placeallevents();
 }
 
+var modal = document.getElementById("request-error-modal");
+var modalCloseButton = document.querySelector(".modal-close-button");
 
-
-/**/
-
-var modal = document.querySelector(".modal");
-var closeButton = document.querySelector(".close-button");
+function placeallevents() {
+    let elements = document.getElementsByClassName("forecast-image");
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseover", handleEventonPicture, true);
+    }
+}
 
 function toggleModal() {
+    if (arguments.length !== 0) {
+        modal.querySelector('.modal-text').innerHTML = arguments[0].toString();
+    }
     modal.classList.toggle("show-modal");
 }
 
@@ -291,5 +306,66 @@ function windowOnClick(event) {
     }
 }
 
-closeButton.addEventListener("click", toggleModal);
+modalCloseButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+document.onmousemove = moveTip;
+
+function moveTip(e) {
+    let floatTipStyle = document.getElementById("floatTip").style;
+    let w = 250; // Ширина слоя
+    // Для браузера IE
+    if (document.all) {
+        var x = event.x + document.body.scrollLeft;
+        var y = event.y + document.body.scrollTop;
+        // Для остальных браузеров
+    } else {
+        var x = e.pageX; // Координата X курсора
+        var y = e.pageY; // Координата Y курсора
+    }
+    // Показывать слой справа от курсора
+    if ((x + w + 10) < document.body.clientWidth) {
+        floatTipStyle.left = x + 'px';
+        // Показывать слой слева от курсора
+    } else {
+        floatTipStyle.left = x - w + 'px';
+    }
+    // Положение от верхнего края окна браузера
+    floatTipStyle.top = y + 20 + 'px';
+}
+
+function toolTipShow(text) {
+    let floatTipStyle = document.getElementById("floatTip").style;
+    document.getElementById("floatTip").innerHTML = text;
+    floatTipStyle.display = "block";
+}
+
+function handleEventonPicture(event) {
+    toolTipShow();
+    let grandAncister = event.target.parentElement.parentElement;
+    console.log(grandAncister);
+    grandAncister.addEventListener("mouseover", toolTipShow);
+    grandAncister.addEventListener("mouseout", toolTipHide);
+}
+
+function toolTipHide() {
+    let floatTipStyle = document.getElementById("floatTip").style;
+    floatTipStyle.display = "none"; // Прячем слой
+}
+
+
+console.log(grandAncister);
+grandAncister.addEventListener("mouseleave", toolTipHide);
+grandAncister.addEventListener("mouseenter", toolTipShow);
+
+/*let grandAncisterCoords = event.target.parentNode.parentNode.getBoundingClientRect();
+let minX = grandAncisterCoords.left;
+let maxX = grandAncisterCoords.right;
+let maxY = grandAncisterCoords.bottom;
+let minY = grandAncisterCoords.top;
+if ((event.clientX < minX || event.clientX > maxX) || (event.clientY < minY || event.clientY > maxY)) {
+        floatTipStyle.display = "none";
+    }
+*/
+
+
