@@ -19,7 +19,7 @@
             let f= new Part2.main;
             console.log (f.getLastArrayOutput());
             f.turnIntoChained();
-            console.log(f.where((x) => x > 2).skip(2).first().getLastArrayOutput());
+            console.log(f.where((x) => x > 2).skip(2).first((x)=>(x*x)).getLastNumericOutput());
         })
     </script>
 </body>

@@ -8,10 +8,9 @@ function partialApply() {
     }
  }
 
- //sums all given arguments. test example
+ // Sums all given arguments. test example
 function sum() {
-    let result=0;
-    [].map.call(arguments,x=>result+=x);
+    let result= [].reduce.call(arguments,(x,y)=>x+y,0);
     return result;
 }
 
