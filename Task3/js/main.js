@@ -2,17 +2,17 @@
 
 //INITIALIZATION
 /*init templates*/
-let forecast_template,
-    forecast_panel_template;
+let forecast_template;
+let forecast_panel_template;
 require(['templatesHTML'], function (templatesHTML) {
     forecast_template = templatesHTML.forecast_template;
     forecast_panel_template = templatesHTML.forecast_panel_template;
 });
 
 /*init operational classes*/
-let layoutActions,
-    apiActions,
-    basicActions;
+let layoutActions;
+let apiActions;
+let basicActions;
 require(['primitive', 'api', 'layout'], function (primitive, api, layout) {
     basicActions = new primitive.basicClass();
     layoutActions = new layout.actionsClass("parent", basicActions);
@@ -24,9 +24,9 @@ require(['primitive', 'api', 'layout'], function (primitive, api, layout) {
 /*button functions*/
 function displaySingleForecast(period, apiInterval) {
     //get selected city from page
-    let d = document.getElementById("one-city-selector"),
-        id = d.options[d.selectedIndex].value,
-        state = {};
+    let d = document.getElementById("one-city-selector");
+    let id = d.options[d.selectedIndex].value;
+    let state = {};
 
     //pre-display preparation
     layoutActions.clearPanels();
@@ -50,9 +50,9 @@ function displaySingleForecast(period, apiInterval) {
 
 function displayForecastByName(period, apiInterval) {
     //get city name from page
-    let d = document.getElementById("manual-input-city"),
-        name = d.value,
-        state = {};
+    let d = document.getElementById("manual-input-city");
+    let name = d.value;
+    let state = {};
 
     //pre-display preparation
     layoutActions.clearPanels();
@@ -76,17 +76,17 @@ function displayForecastByName(period, apiInterval) {
 
 function compareTwoForecasts(period, apiInterval) {
     //get info from web page
-    let d = document.getElementById("compare-first-city-selector"),
-        cityOne = d.options[d.selectedIndex].value;
+    let d = document.getElementById("compare-first-city-selector");
+    let cityOne = d.options[d.selectedIndex].value;
     d = document.getElementById("compare-second-city-selector");
     let cityTwo = d.options[d.selectedIndex].value;
 
     //display double layout, get all id-s and init state
-    let panels = layoutActions.showDoubleLayout(),
-        leftPanel = panels.left,
-        rightPanel = panels.right,
-        stateOne = {},
-        stateTwo = {};
+    let panels = layoutActions.showDoubleLayout();
+    let leftPanel = panels.left;
+    let rightPanel = panels.right;
+    let stateOne = {};
+    let stateTwo = {};
 
     //pre-display events
     layoutActions.clearPanels();
@@ -133,8 +133,8 @@ function placeEventsOnForecast() {
 }
 
 /*modal window handling*/
-let modal = document.getElementById("request-error-modal"),
-    modalCloseButton = document.querySelector(".modal-close-button");
+let modal = document.getElementById("request-error-modal");
+let modalCloseButton = document.querySelector(".modal-close-button");
 modalCloseButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
@@ -156,9 +156,9 @@ document.onmousemove = moveTip;
 
 function moveTip(event) {
     let floatTipStyle = document.getElementById("floatTip").style;
-    let w = 250,
-        x = event.pageX,
-        y = event.pageY;
+    let w = 250;
+    let x = event.pageX;
+    let y = event.pageY;
     //ie check
     if (document.all) {
         x = event.x + document.body.scrollLeft;
@@ -186,13 +186,12 @@ function tooltipHide() {
 
 function handleEventOnPicture(event) {
     let grandAncister = event.target.parentElement.parentElement;
-
-    let minTemp = grandAncister.querySelector('.min-temperature').innerHTML,
-        maxTemp = grandAncister.querySelector('.max-temperature').innerHTML,
-        avgTemperature;
+    let minTemp = grandAncister.querySelector('.min-temperature').innerHTML;
+    let maxTemp = grandAncister.querySelector('.max-temperature').innerHTML;
+    let avgTemperature;
     minTemp = minTemp.substring(minTemp.indexOf(': ') + 1);
     maxTemp = maxTemp.substring(maxTemp.indexOf(': ') + 1);
-    avgTemperature = 'avg t(*C): ' + ((parseFloat(minTemp) + parseFloat(maxTemp))/2).toPrecision(4);
+    avgTemperature = 'avg t(*C): ' + ((parseFloat(minTemp) + parseFloat(maxTemp)) / 2).toPrecision(4);
     toolTipShow(avgTemperature);
 
     grandAncister.addEventListener("mouseover", handleEventOnAncister);
@@ -202,13 +201,14 @@ function handleEventOnPicture(event) {
 function handleEventOnAncister(event) {
     let am = event.currentTarget;
     console.log(am);
-    let minTemp = am.querySelector('.min-temperature').innerHTML,
-        maxTemp = am.querySelector('.max-temperature').innerHTML,
-        avgTemperature;
+    let minTemp = am.querySelector('.min-temperature').innerHTML;
+    let maxTemp = am.querySelector('.max-temperature').innerHTML;
+    let avgTemperature;
     minTemp = minTemp.substring(minTemp.indexOf(': ') + 1);
     maxTemp = maxTemp.substring(maxTemp.indexOf(': ') + 1);
-    avgTemperature = 'avg t(*C): ' + ((parseFloat(minTemp) + parseFloat(maxTemp))/2).toPrecision(4);
+    avgTemperature = 'avg t(*C): ' + ((parseFloat(minTemp) + parseFloat(maxTemp)) / 2).toPrecision(4);
     toolTipShow(avgTemperature);
 }
+
 //END-MAIN
 

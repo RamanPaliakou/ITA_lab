@@ -10,10 +10,10 @@ define('api', function () {
         composeFromRecieved(obj) {
             let weatherState = [];
             for (let i = 0; i < obj.list.length; i++) {
-                let fullTime = new Date(obj.list[i].dt_txt),
-                    hours = fullTime.getHours(),
-                    day = fullTime.getDate(),
-                    month = fullTime.toLocaleString("en-us", { month: "long" });
+                let fullTime = new Date(obj.list[i].dt_txt);
+                let hours = fullTime.getHours();
+                let day = fullTime.getDate();
+                let month = fullTime.toLocaleString("en-us", {month: "long"});
                 let singleForecast = {
                     city: obj.city.name,
                     minTemperature: obj.list[i].main.temp_min,
@@ -71,6 +71,7 @@ define('api', function () {
         }
 
     }
+
     return {
         processorClass: apiProcessor
     }

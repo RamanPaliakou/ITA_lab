@@ -9,8 +9,10 @@ define('primitive', function () {
         };
 
         getTimePeriod(time) {
-            if (+time >= 12) return "PM";
-            if (+time < 12) return "AM";
+            if (+time >= 12)
+                return "PM";
+            if (+time < 12)
+                return "AM";
         }
     }
 

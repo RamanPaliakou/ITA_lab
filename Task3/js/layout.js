@@ -57,7 +57,6 @@ define('layout', function () {
             }
         }
 
-        /*changed to panelId*/
         addForecast(forecastHtmlTemplate, displayData, panelId) {
             //create element
             let forecast = this.htmlToElement(forecastHtmlTemplate);
@@ -79,7 +78,8 @@ define('layout', function () {
         addPanel(panelHtmlTemplate, title) {
             //remember parent. differs when comparison layout is displayed
             let parent = this._globalParentId;
-            if (arguments.length === 3) parent = arguments[2];
+            if (arguments.length === 3)
+                parent = arguments[2];
             //create element
             let panel = this.htmlToElement(panelHtmlTemplate);
             panel.id = this._operatorClass.randomStringGenerator();
@@ -93,40 +93,43 @@ define('layout', function () {
         };
 
         clearPanels() {
-            if (this._displayedFCPanels.length === 0) return;
+            if (this._displayedFCPanels.length === 0)
+                return;
             for (let i = 0; i < this._displayedFCPanels.length; i++) {
                 document.getElementById(this._displayedFCPanels[i]).remove();
             }
             this._displayedFCPanels = [];
         };
 
-        /*changed length*/
         displaySingleCityForecast(FCdata, displayedPeriod, apiPeriod) {
             let parent = this._globalParentId;
-            if (arguments.length >= 4) parent = arguments[3];
+            if (arguments.length >= 4)
+                parent = arguments[3];
 
             let context = this;
-            let maxTime = displayedPeriod,
-                curTime = 0,
-                period = apiPeriod;
+            let maxTime = displayedPeriod;
+            let curTime = 0;
+            let period = apiPeriod;
 
             let j = 0;
             while (j < FCdata.length && curTime < maxTime) {
                 //create panel to display forecasts
                 let timeZone = this._operatorClass.getTimePeriod(FCdata[j].hours);
-                let panelId = this.addPanel(forecast_panel_template, FCdata[j].city + '; ' + FCdata[j].month +', '+FCdata[j].day +'; time-period: ' + timeZone, parent);
+                let panelId = this.addPanel(forecast_panel_template, FCdata[j].city + '; ' + FCdata[j].month + ', ' + FCdata[j].day + '; time-period: ' + timeZone, parent);
                 //add forecast windows to panel
                 while ((context._operatorClass.getTimePeriod(FCdata[j].hours)) === timeZone) {
                     this.addForecast(forecast_template, FCdata[j], panelId);
                     j++;
                     //inc total displayed weather forecast and check for number of displayed
                     curTime += period;
-                    if (curTime >= maxTime || j>= FCdata.length) break;
+                    if (curTime >= maxTime || j >= FCdata.length)
+                        break;
                 }
             }
         }
 
     }
+
     return {
         actionsClass: LayoutActions
     }
