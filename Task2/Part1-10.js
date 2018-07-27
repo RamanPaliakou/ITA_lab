@@ -1,4 +1,4 @@
-//variant-1
+// Variant-1
 function apb(a, b) {
     return a + b;
 }
@@ -19,18 +19,18 @@ class Lazy {
     }
 
     get state() {
-        return `${this._state}`;
+        return this._state;
     }
 }
 
-var f = new Lazy(apb, 5, 7);
+let f = new Lazy(apb, 5, 7);
 console.log(f.state);
 console.log(f.calculate());
 console.log(f.state);
 
-//variant-2
-//written as much as close to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*
-//but not operational
+// Variant-2
+// Written as much as close to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*
+// but not operational
 /*function CreateGenerator(fn) {
     args = [].slice.call(arguments, 1, arguments.length);
     return function* () {
