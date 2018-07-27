@@ -1,80 +1,108 @@
 .site-name {
-    height: 80px;
     padding: 32px 0 0 0;
-    float: left;
     font-size: 24px;
     display: inline-block;
     color: #fff;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
 }
-.main-menu{
-    float:right;
-    height: 80px;
 
+.spacer {
+    -webkit-flex-grow: 2;
+    -moz-flex-grow: 2;
+    flex-grow: 2;
+}
+
+.main-menu {
+    float: right;
+    height: 80px;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    -webkit-flex-grow: 4;
+    -moz-flex-grow: 4;
+    flex-grow: 4;
 }
+
 .main-menu-element {
     display: inline-block;
     text-decoration: none;
 }
+
 .main-menu-element:last-child {
     margin: 0;
 }
+
 .main-menu-ref {
     float: left;
     padding: 35px 0 0 0;
-    width:70px;
+    width: 70px;
     height: 80px;
     display: inline-block;
     text-align: center;
     font-size: 16px;
     text-decoration: none;
 }
+
 .main-title {
-    margin: 0;
+    word-spacing: 10px;
+    margin: 0 auto 0 auto;
+    width: 700px;
     font-size: 30px;
-    text-align: center;
+    text-align: right;
     text-transform: uppercase;
     color: #fff;
 }
+
 .main-undertitle {
-    margin: 0;
+    margin: 0 auto 0 auto;
     font-size: 20px;
     text-align: center;
     color: #fff;
 }
+
 .main-picture {
     margin: 50px 0 0 0;
-    height: 400px;
+    min-height: 400px;
+    display: block;
 }
 
 /*small block with image centered, followed by title and an undertitle text. used in quotes-section*/
 .quote {
-    min-height: 260px;
-    width: 370px;
-    margin: 80px 30px 80px 0;
+    max-height: 260px;
+    max-width: 370px;
     padding: 0 36px 0 36px;
-    text-align: center;
-    display: block;
-    float: left;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
+
 .quote-image {
-    min-height: 100px;
+    height: 100px;
     width: 100px;
     border-radius: 50px 50px 50px 50px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 27px auto;
 }
+
 .quote-title {
-    margin: 34px 0 29px 0;
+    margin: 0 0 29px 0;
     padding: 0;
     font-size: 28px;
+    display: block;
+    text-align: center;
 }
+
 .quote-p {
     font-size: 16px;
     padding: 0;
     margin: 0 0 20px 0;
+    display: block;
+    text-align: center;
 }
+
 .quote-link {
     min-height: 9px;
     max-height: 10px;
@@ -83,9 +111,6 @@
     margin: 0 auto;
     display: block;
 }
-.quote:last-child {
-    margin: 80px 0 80px 0;
-}
 
 /*the block contains two info-blocks located horizontally. twice used in main-info-section located horizontally*/
 .info-panel {
@@ -93,10 +118,7 @@
     width: 570px;
     text-align: left;
     display: inline-block;
-    margin: 80px 22px 80px 0;
-}
-.info-panel:last-child {
-    margin: 80px 0 80px 0;
+    margin: 10px 22px 10px 0;
 }
 
 /*block contains horizontal text with title and a round image*/
@@ -105,32 +127,37 @@
     width: 570px;
     margin: 0 0 30px 0;
 }
+
 .info-block-image {
     width: 200px;
     height: 200px;
     border-radius: 100px 100px 100px 100px;
     margin: 0;
-    float:inherit;
+    float: inherit;
 }
+
 .info-block-textblock {
     margin: 40px 31px 0 31px;
     width: 304px;
     display: inline-block;
-    float:inherit;
+    float: inherit;
     text-align: inherit;
 }
+
 .info-block-textblock-h2 {
     font-size: 28px;
     margin: 0 0 31px 0;
     padding: 0;
 }
+
 .info-block-textblock-p {
     font-size: 16px;
     margin: 0;
     padding: 0;
 }
+
 .info-block-link {
-    display:inline;
+    display: inline;
 }
 
 /*specifier for info-block, intended to group some common properties*/
@@ -138,6 +165,7 @@
     float: right;
     text-align: right;
 }
+
 .right-panel-block {
     float: left;
     text-align: left;
@@ -153,12 +181,10 @@
 .contact {
     height: 70px;
     width: 370px;
-    margin: 0 22px 79px 0;
+    margin: 0 22px 5px 0;
     display: inline-block;
 }
-.contact:last-child {
-    margin: 0 0 79px 0;
-}
+
 .contact-img {
     width: 70px;
     height: 70px;
@@ -166,39 +192,46 @@
     float: left;
     margin: 0 30px 0 0;
 }
+
 .contact-text {
     padding: 14px 0 0 0;
     float: left;
 }
+
 .contact-text-p {
-    margin:  0 15px 0 0;
+    margin: 0 15px 0 0;
     width: 255px;
     font-size: 16px;
     text-align: left;
     color: #8A8892;
 }
+
 .horizontal-line {
-    height: 1px;
+    min-height: 2px;
+    margin: 74px 0 0 0;
     border-top: 1px solid #4F4E53;
+    box-sizing: content-box;
 }
+
 .footer-title {
     margin: 60px auto 0 auto;
     text-align: center;
     font-size: 26px;
     color: #E6E6E6;
 }
+
 /*contains line to enter email and subscribe-button*/
 .input-panel {
-    width:589px;
+    width: 580px;
     margin: 30px auto 0 auto;
     line-height: 25px;
-
 }
+
 .email-line {
     height: 46px;
     max-height: 46px;
     line-height: 25px;
-    width: 454px;
+    width: 79%;
     border-radius: 5px 0 0 5px;
     border: 0;
     background: #DB5940;
@@ -207,14 +240,19 @@
     padding: 0 0 0 16px;
     font-size: 16px;
 }
-.send-button {
+
+.email-line::placeholder {
+    color: #ffffff;
+}
+
+.email-subscribe-button {
     font-size: 17px;
     height: 46px;
     line-height: 25px;
     max-height: 46px;
     margin: 0 0 0 -5px;
     padding: 0;
-    width: 115px;
+    width: 19%;
     border: 0;
     border-radius: 0 5px 5px 0;
     color: #DB5940;
@@ -222,7 +260,7 @@
 }
 
 .copyright {
-    margin: 40px 0 0 0;
+    margin: 40px auto 0 auto;
     text-align: center;
     color: #9A98A2;
 }
@@ -230,25 +268,27 @@
 /*contains links to the designer and the image-storage */
 .designer-links {
     text-align: center;
-    margin: 0 0 10px 0;
+    margin: 0 auto 10px auto;
+    font-size: 16px;
 }
-.text-color1 {
+
+.footer-down-text-light {
     color: #DB5940;
     margin: 0;
     padding: 0;
-    font-size: 16px;
     text-decoration: none;
     display: inline;
 }
-.text-color2 {
+
+.footer-down-text-dark {
     margin: 0;
-    padding :0;
+    padding: 0;
     color: #9A98A2;
-    font-size: 16px;
     text-decoration: none;
     display: inline;
 }
+
 .horizontal-line-down {
-    height: 2px;
+    min-height: 1px;
     border-top: 1px solid #fff;
 }
