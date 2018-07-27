@@ -1,0 +1,47 @@
+.main-info-section-top-left-image {
+    background: url(../image/boy.png) center top no-repeat;
+}
+
+.main-info-section-bottom-right-image {
+    background: url(../image/birds.png) center top no-repeat;
+}
+
+.main-info-section-bottom-left-image {
+    background: url(../image/statue.png) center top no-repeat;
+}
+
+.main-info-section-top-right-image {
+    background: url(../image/tree.png) center top no-repeat;
+}
+
+.imagelink-initial-state-image {
+    background: url(../image/turn-right-orange.png) no-repeat center top /cover;
+}
+
+.quotes-section-left-image {
+    background: url(../image/Heart.png) no-repeat center top;
+}
+
+.quotes-section-central-image {
+    background: url(../image/Pencil.png) no-repeat center top;
+}
+
+.quotes-section-right-image {
+    background: url(../image/Flag.png) no-repeat center top;
+}
+
+.contacts-section-left-image {
+    background: url(../image/paperplane.png) no-repeat center top / cover;
+}
+
+.contacts-section-central-image {
+    background: url(../image/microphone.png) no-repeat center top / cover;
+}
+
+.contacts-section-right-image {
+    background: url(../image/userlogo.png) no-repeat center top / cover;
+}
+
+.image-main {
+    background: url(../image/titlepic.png) no-repeat center top / cover;
+}

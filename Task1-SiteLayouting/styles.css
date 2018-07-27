@@ -1,0 +1,138 @@
+@import url(css/resourses.css);
+body {
+    padding : 0;
+    margin: 0;
+    font-family: CustomTry1, sans-serif;
+    /*min-width: 594px;*/
+}
+.box {
+    box-sizing: border-box;
+}
+
+/*ELEMENTS*/
+.site-name {
+    border: 1px solid black;
+    margin: 0 auto 0 auto;
+    font-size: 24px;
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.spacer {
+    visibility: hidden;
+}
+.main-menu{
+    padding-left: unset;
+    text-decoration: none;
+    list-style-type: none;
+    display: block;
+    width: 100vw;
+}
+.main-menu-element {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    list-style-type: none;
+}
+
+.main-menu-ref {
+    border: 1px solid blue;
+
+    max-height: 80px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    list-style-type: none;
+    display: block;
+
+}
+/*LAYOUT*/
+.container {
+      margin: 0 auto;
+  }
+.menu-logo-section {
+    background: #DB5940;
+    min-height: 80px;
+}
+.flex-horizontal,
+,
+.flex-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+}
+.flex-horizontal {
+    flex-direction: row;
+}
+.flex-menu {
+    max-width: 1170px;
+  /**/  flex-direction: column;
+}
+.flex-vertical {
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*STATES*/
+.link-title:link,
+.link-title:visited,
+.link-title:hover,
+.link-title:active {
+    text-decoration: none;
+}
+.link-title:link,
+.link-title:visited {
+    color:#ffffff;
+}
+.link-title:hover {
+    color:#38373B;
+}
+.link-title:active {
+    color: #000000;
+}
+.main-menu-element:hover {
+    background: #38373B;
+}
+.main-menu-ref:link,
+.main-menu-ref:visited {
+    color: #ffffff;
+}
+.main-menu-ref:hover {
+    color:#DB5940;
+}
+.main-menu-ref:active{
+    color: #ffffff;
+}
