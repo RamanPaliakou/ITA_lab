@@ -1,0 +1,37 @@
+.image-boy {
+    background: url(../img/boy.png) center top no-repeat;
+}
+.image-birds {
+    background: url(../img/birds.png) center top no-repeat;
+}
+.image-statue {
+    background: url(../img/statue.png) center top no-repeat;
+}
+.image-tree {
+    background: url(../img/tree.png) center top no-repeat;
+}
+.link-init-image-arrow {
+    background: url(../img/turn-right-orange.png) no-repeat center top /cover;
+}
+.image-heart {
+    background: url(../img/Heart.png) no-repeat center top;
+}
+.image-pencil {
+    background: url(../img/Pencil.png) no-repeat center top;
+}
+.image-flag {
+    background: url(../img/Flag.png) no-repeat center top;
+}
+.image-plain {
+    background: url(../img/paperplane.png) no-repeat center top / cover;
+}
+.image-micro {
+    background: url(../img/microphone.png) no-repeat center top / cover;
+}
+.image-user {
+    background: url(../img/userlogo.png) no-repeat center top / cover;
+}
+.image-main {
+    background: url(../img/titlepic.png) no-repeat center top / cover;
+    max-width: 100%;
+}
